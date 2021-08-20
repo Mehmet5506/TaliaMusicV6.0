@@ -6,18 +6,18 @@ class Messages():
   INFO_MSG = [
     ".",
 f"""
-**󠁧󠁢󠁥󠁮󠁧󠁿✨ {BOT_NAME} information panel ✨ \n
-💭 as you know, cyber music is a telegram music bot project for streaming music on telegram voice chat group feature.\n
-💠 cyber music project was founded on April 12, 2020, we created a music bot project for streaming on telegram voice chat, which is now known as cyber music bot.\n
-🧪 cyber music version:
+**󠁧󠁢󠁥󠁮󠁧󠁿✨ @Efsanestar_bot bilgi paneli✨ \n
+💭 Bildiğiniz gibi, siber müzik telegram sesli sohbet grubu özelliğinde müzik akışı için bir telegram müzik botu projesidir.\n
+💠 Talia müzik projesi 12 Nisan 2020'de kuruldu, şimdi olarak bilinen telegram sesli sohbetinde akış için bir müzik botu projesi oluşturduk. Talia müzik bot.\n
+🧪 Talia müzik versiyonu:
 ❍ ver.6.0
 ❍ beta-version \n
 👩🏻‍💻 developer:
-❍ @{DEV_NAME}
-❍ @{OWNER_NAME}\n
+❍ @Mahoaga
+❍ @Byboss\n
 💬 support chat:
-❍ @{GROUP_SUPPORT}
+❍ @Sohbetneresi
 📣 updates channel:
-❍ @{UPDATES_CHANNEL}\n
+❍ @SohnetDestek\n
 """
   ]
