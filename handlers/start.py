@@ -45,22 +45,22 @@ async def start_(client: Client, message: Message):
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+                        "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕", url=f"https://t.me/Efsanestarbot?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "📚 ᴄᴏᴍᴍᴀɴᴅs", url="https://t.me/CyberMusicProject/4"
+                         "📚 ᴄᴏᴍᴍᴀɴᴅs", url="https://t.me/KanalEfsanestar"
                     ),
                     InlineKeyboardButton(
-                        "💝 ᴅᴏɴᴀᴛᴇ", url=f"https://t.me/{OWNER_NAME}")
+                        "💝 ᴅᴏɴᴀᴛᴇ", url=f"https://t.me/Mahoaga")
                 ],[
                     InlineKeyboardButton(
-                        "👥 ᴏғғɪᴄɪᴀʟ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "👥 ᴏғғɪᴄɪᴀʟ ɢʀᴏᴜᴘ", url=f"https://t.me/Sohbetneresi"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")               
+                        "📣 ᴏғғɪᴄɪᴀʟ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/SohbetDestek")               
                  ],[
                     InlineKeyboardButton(
-                        "🧪 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🧪", url="https://github.com/aryazakaria01/CBMusicBot"
+                        "🧪 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🧪", url="https://github.com/Mehmet5506/TaliaMusic99"
                     )
                 ]
             ]
@@ -80,17 +80,17 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "☢ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "☢ ɢʀᴏᴜᴘ", url=f"https://t.me/SohbetSkayfall"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/SohbetDestek"
                     )
                 ]
             ]
         )
     )
 
-@Client.on_message(command(["help", f"help@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["help", f"help@Efsanestar_bot"]) & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_text(
         f"""<b>☢ ʜᴇʟʟᴏ {message.from_user.mention()}, ᴘʟᴇᴀsᴇ ᴛᴀᴘ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ʜᴇʟᴘ ᴍᴇssᴀɢᴇ ʏᴏᴜ ᴄᴀɴ ʀᴇᴀᴅ ғᴏʀ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ</b>""",
@@ -98,7 +98,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="✔ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ", url=f"https://t.me/{BOT_USERNAME}?start=help"
+                        text="✔ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ", url=f"https://t.me/Efsanestar_bot?start=help"
                     )
                 ]
             ]
@@ -108,13 +108,13 @@ async def help(client: Client, message: Message):
 @Client.on_message(command("help") & filters.private & ~filters.edited)
 async def help_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>Hello {message.from_user.mention()}, welcome to help menu ✨
-\n📙 HOW TO USE ME ?
+        f"""<b>Merhaba {message.from_user.mention()}, yardım menüsüne hoş geldiniz✨
+\n📙 BENI NASIL KULLANARSIN?
 \n1. first add me to your group.
 2. promote me as admin and give all permission.
-3. then, add @{ASSISTANT_NAME} to your group or type /userbotjoin.
+3. then, add @taliaMusicasistant to your group or type /userbotjoin.
 3. make sure you turn on the voice chat first before start playing music.
-\n💁🏻‍♀️ **commands for all user:**
+\n💁🏻‍♀️ **tüm kullanıcı için komutlar:**
 \n/play (song name) - play song from youtube
 /stream (reply to audio) - play song using audio file
 /playlist - show the list song in queue
@@ -123,7 +123,7 @@ async def help_(client: Client, message: Message):
 /vsong (video name) - download video from youtube detailed
 /lyric - (song name) lyrics scrapper
 /vk (song name) - download song from inline mode
-\n👷🏻‍♂️ **commands for admins:**
+\n👷🏻‍♂️ **yöneticiler için komutlar:**
 \n/player - open music player settings panel
 /pause - pause the music streaming
 /resume - resume the music was paused
@@ -135,7 +135,7 @@ async def help_(client: Client, message: Message):
 /auth - authorized user for using music bot
 /deauth - unauthorized for using music bot
 /musicplayer (on / off) - disable / enable music player in your group
-\n🎧 channel streaming commands:
+\n🎧 kanal akışı komutları:
 \n/cplay - stream music on channel voice chat
 /cplayer - show the song in streaming
 /cpause - pause the streaming music
@@ -146,7 +146,7 @@ async def help_(client: Client, message: Message):
 \n🧙‍♂️ command for sudo users:
 \n/userbotleaveall - order the assistant to leave from all group
 /gcast - send a broadcast message trought the assistant
-\n🎊 **commands for fun:**
+\n🎊 **eğlence için komutlar:**
 \n/chika - check it by yourself
 /wibu - check it by yourself
 /asupan - check it by yourself
@@ -157,15 +157,15 @@ async def help_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "☣ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "☣ ɢʀᴏᴜᴘ", url=f"https://t.me/Sohbetneresi"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/SohbetDestek"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "♞🏻‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/{OWNER_NAME}"
+                        "♞🏻‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/Mahoaga"
                     )
                 ]
             ]
@@ -173,7 +173,7 @@ async def help_(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["ping", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["ping", f"ping@Efsanestar_bot"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("ᴘɪɴɢɪɴɢ...")
@@ -184,7 +184,7 @@ async def ping_pong(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["uptime", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
+@Client.on_message(command(["uptime", f"uptime@Efsanestar_bot"]) & ~filters.edited)
 @authorized_users_only
 async def get_uptime(client: Client, message: Message):
     current_time = datetime.utcnow()
