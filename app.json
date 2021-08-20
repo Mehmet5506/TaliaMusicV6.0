@@ -69,12 +69,12 @@
         "UPDATES_CHANNEL": {
             "description": "isi dengan username channel kamu, jika tidak punya lewati saja",
             "required": false,
-            "value": "CyberMusicProject"
+            "value": "TaliaMusicProject"
         },
         "GROUP_SUPPORT": {
             "description": "isi dengan username grup kamu, jika tidak punya skip saja",
             "required": false,
-            "value": "CyberSupportGroup"
+            "value": "TaliaSupportGroup"
         }
     },
     "buildpacks": [
