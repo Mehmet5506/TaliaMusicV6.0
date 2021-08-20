@@ -85,10 +85,10 @@ def updated_stats(chat, queue, vol=100):
         stats = "sᴇᴛᴛɪɴɢs ᴏғ **{}**".format(chat.title)
         if len(que) > 0:
             stats += "\n\n"
-            stats += "ᴠᴏʟᴜᴍᴇ : {}%\n".format(vol)
-            stats += "sᴏɴɢs ɪɴ ǫᴜᴇᴜᴇ : `{}`\n".format(len(que))
-            stats += "ɴᴏᴡ ᴘʟᴀʏɪɴɢ : **{}**\n".format(queue[0][0])
-            stats += "ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {}".format(queue[0][1].mention)
+            stats += "Ses ayarı : {}%\n".format(vol)
+            stats += "şarkı ismi : `{}`\n".format(len(que))
+            stats += "Şimdi oynatıyor : **{}**\n".format(queue[0][0])
+            stats += "Parça Aratan : {}".format(queue[0][1].mention)
     else:
         stats = None
     return stats
