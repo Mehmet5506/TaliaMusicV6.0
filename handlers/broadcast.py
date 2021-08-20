@@ -1,5 +1,5 @@
-# Copyright (C) 2021 By CyberProject
-# Originally written by Arya Zakaria on github
+# Copyright (C) 2021 By TaliaProject
+# Originally written by Anonim on github
 # Broadcast function
 
 
@@ -19,9 +19,9 @@ async def broadcast(_, message: Message):
     if message.from_user.id not in SUDO_USERS:
         return
     else:
-        wtf = await message.reply("`Starting broadcast...`")
+        wtf = await message.reply("`Yayın başlatılıyor...`")
         if not message.reply_to_message:
-            await wtf.edit("Please reply to a message to start broadcast!")
+            await wtf.edit("Yayını başlatmak için lütfen bir iletiyi yanıtlayın!")
             return
         lmao = message.reply_to_message.text
         async for dialog in veez.iter_dialogs():
