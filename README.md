@@ -44,8 +44,7 @@
 - '/playlist' - Şimdi çalma listesini göster
 - '/song <song name>' - istediğiniz şarkıları hızlı bir şekilde indirin
 - '/search <query>' - youtube'da detayları içeren videoları arayın
-- '/vsong <song adı>' - istediğiniz videoları hızlı bir şekilde indirin
-- '/lirik <song name>' - şarkı sözleri kazıyıcı
+- '/vsong <song adı>' - istediğiniz videoları hızlı bir şekilde indiri
 
 #### Yalnızca Yöneticiler👷‍♂️
 - '/player' - açık müzik çalar ayarları paneli
@@ -58,7 +57,7 @@
 - '/userbotjoin' - asistanı sohbetinize davet edin
 - '/userbotleave' - asistanı sohbetinizden çıkarın
 - '/reload' - Yönetici listesini yenile
-- '/çalışma süresi' - botun çalışma süresi durumunu kontrol edin
+- '/uptime' - botun çalışma süresi durumunu kontrol edin
 - '/ping' - bot ping durumunu kontrol edin
 
 ### Sudo Kullanıcısı 🧙‍♂️
