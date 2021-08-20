@@ -83,7 +83,7 @@ Demiryolunda konuşlandırma için [Necessary Variables Here](https://github.com
 [![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/aryazakaria01/CBMusicBot&envs=SESSION_NAME,BOT_TOKEN,BOT_USERNAME,BOT_NAME,GROUP_SUPPORT,ASSISTANT_NAME,OWNER_NAME,BG_IMAGE,UPDATES_CHANNEL,API_ID,API_HASH,PMPERMIT,SUDO_USERS,DURATION_LIMIT,THUMB_IMG)
 
 ### Kredi 💖
-- [Arya Zakaria](https://github.com/aryazakaria01): Dev
+- [TaliaMusicProject](https://github.com/Mehmet5506): Dev
 - [Laky](https://github.com/Laky-64) & [Andrew](https://github.com/AndrewLaneX): PyTgCalls
 - [Original Repo](https://github.com/suprojects/CallsMusic)
 - [Cyber Music Bot](https://t.me/CyberMusikBot) Our Music Bot
