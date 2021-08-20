@@ -1,7 +1,6 @@
-<h2 align="centre">🎶 Cyber Music Bot 🎶</h2>
+<h2 align="centre">🎶 Talia Music Bot 🎶</h2>
 
-### Cyber Music is a telegram bot project that's allow you to play music on telegram voice chat group.
-
+### Talia Music, telegram sesli sohbet grubunda müzik çalmanıza izin veren bir telegram bot projesidir.
  <p align="center"><a href="https://t.me/CyberMusikBot"><img src="https://telegra.ph/file/a884f8f101263a935b154.jpg" width="300"></a></p>
 <p align="center">
     <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&color=red" /></a>
