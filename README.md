@@ -20,7 +20,7 @@
 [![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@levinalab/StringSession#main.py)
 ### [Session bot ile almak](https://t.me/Sitringsison_bot)
 
-## Özellik 🔮
+### Telegram Müzik özellikleri 🔮
 
 - Küçük Resim Desteği
 - Çalma Listesi Desteği
@@ -34,7 +34,7 @@
 - Şarkı Sözleri Scrapper
 - Sınırsız Kuyruk
 
-## Komutlar Aşağıdadır.🛠
+## Komutlar ⌨️
 
 - '/play <song name>' - istediğiniz şarkıyı çalın
 - '/playlist' - Şimdi çalma listesini göster
