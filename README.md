@@ -47,7 +47,7 @@
 - '/vsong <song adı>' - istediğiniz videoları hızlı bir şekilde indirin
 - '/lirik <song name>' - şarkı sözleri kazıyıcı
 
-#### Yalnızca Yöneticiler 👷‍♂️
+#### Yalnızca Yöneticiler👷‍♂️
 - '/player' - açık müzik çalar ayarları paneli
 - '/pause' - şarkı çalmayı duraklat
 - '/resume' - şarkı çalmaya devam et
@@ -89,5 +89,5 @@ Demiryolunda konuşlandırma için [Necessary Variables Here](https://github.com
 - [Talia Music Bot](https://t.me/Efsanestar_bot) Müzik Botumuz
 - [By Boss](https://t.me/Byboss) Sohbet Tayfası Developer
 
-### Destek ve Güncelleştirmeler 🎑
+### Destek ve Güncelleştirmeler🎑
 <a href="https://t.me/Sohbetneresi"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/SohbetDestek"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
