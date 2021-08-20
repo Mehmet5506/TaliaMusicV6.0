@@ -28,10 +28,10 @@ async def stream(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="📣 ᴄʜᴀɴɴᴇʟ",
-                        url=f"https://t.me/{UPDATES_CHANNEL}"),
+                        url=f"https://t.me/SohbetDestek"),
                     InlineKeyboardButton(
                         text="♞ ᴅᴇᴠ's",
-                        url=f"https://t.me/{OWNER_NAME}")
+                        url=f"https://t.me/Mahoaga")
                 ]
             ]
         )
@@ -60,7 +60,7 @@ async def stream(_, message: Message):
         await message.reply_photo(
         photo=f"{QUE_IMG}",
         reply_markup=keyboard,
-        caption=f"#⌛ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛᴇᴅ sᴏɴɢ ᴡᴀs ᴀᴅᴅᴇᴅ ᴛᴏ **ǫᴜᴇᴜᴇ** ᴀᴛ ᴘᴏsɪᴛɪᴏɴ {position}!\n\n✈ ᴘᴏᴡᴇʀᴇᴅ ʙʏ {bn}")
+        caption=f"#⌛ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛᴇᴅ sᴏɴɢ ᴡᴀs ᴀᴅᴅᴇᴅ ᴛᴏ **Sıraya** ᴀᴛ ᴘᴏsɪᴛɪᴏɴ {position}!\n\n✈ ᴘᴏᴡᴇʀᴇᴅ ʙʏ {bn}")
         return await lel.delete()
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
