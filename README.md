@@ -1,4 +1,4 @@
-<h2 align="centre">🎶 Talia Music Bot 🎶</h2>
+<h2 align="centre">🕸️Talia Music Bot 🏋️‍♀️</h2>
 
 ### Talia Music, telegram sesli sohbet grubunda müzik çalmanıza izin veren bir telegram bot projesidir.
  
