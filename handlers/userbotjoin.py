@@ -15,7 +15,7 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>make me as admin first !</b>",
+            "<b>önce beni yönetici yap!</b>",
         )
         return
 
@@ -26,16 +26,16 @@ async def addchannel(client, message):
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "🤖: i'm joined here for playing music on voice chat")
+        await USER.send_message(message.chat.id, "🤖: sesli sohbette müzik çalmak için buraya katıldım")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your chat</b>",
+            "<b>sohbetinizde zaten yardımcıyım</b>",
         )
     except Exception as e:
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add Asisstant to your Group and try again</b>",
+            "\n\nVeya Grubunuza el ile Asisstant ekleyin ve yeniden deneyin</b>",
         )
         return
     await message.reply_text(
