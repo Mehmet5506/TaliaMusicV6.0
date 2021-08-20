@@ -85,9 +85,9 @@ Demiryolunda konuşlandırma için [Necessary Variables Here](https://github.com
 ### Kredi 💖
 - [TaliaMusicProject](https://github.com/Mehmet5506): Dev
 - [Laky](https://github.com/Laky-64) & [Andrew](https://github.com/AndrewLaneX): PyTgCalls
-- [Original Repo](https://github.com/suprojects/CallsMusic)
-- [Cyber Music Bot](https://t.me/CyberMusikBot) Our Music Bot
-- [RojSerBest](https://github.com/rojserbest) CallsMusic Developer
+- [Düzenlenen Repo](https://github.com/Mehmet5506)
+- [Talia Music Bot](https://t.me/Efsanestar_bot) Müzik Botumuz
+- [By Boss](https://github.com/Byboss) Sohbet Tayfası Developer
 
 ### Destek ve Güncelleştirmeler 🎑
 <a href="https://t.me/Sohbetneresi"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/SohbetDestek"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
