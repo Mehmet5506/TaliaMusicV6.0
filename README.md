@@ -13,7 +13,7 @@
     <a href="https://github.com/aryazakaria01/CBMusicBot/network/members"> <img src="https://img.shields.io/github/stars/aryazakaria01/CBMusicBot?color=red&logo=github&logoColor=blue&style=flat-square" /></a>  
 </p>
 
-<h3>Requirements 📝</h3>
+<h3>Gereksinimler 📝</h3>
 
 - FFmpeg
 - NodeJS [nodesource.com](https://nodesource.com/)
@@ -24,53 +24,53 @@
 
 [![GenerateString](https://img.shields.io/badge/repl.it-generateString-yellowgreen)](https://replit.com/@levinalab/StringSession#main.py)
 
-## Features 🔮
+## Özellik 🔮
 
-- Thumbnail Support
-- Playlist Support
-- Showing track names when skipping
-- Youtube, Local playback support
-- Settings panel
-- Control with buttons
-- Userbot auto join
-- Channel Music Play
-- Keyboard selection support for youtube play
-- Lyrics Scrapper
-- Unlimited Queue
+- Küçük Resim Desteği
+- Çalma Listesi Desteği
+- Atlarken parça adlarını gösterme
+- Youtube, Yerel oynatma desteği
+- Ayarlar paneli
+- Düğmelerle kontrol edin
+- Userbot otomatik birleştirme
+- Kanal Müziği Çalma
+- Youtube play için klavye seçimi desteği
+- Şarkı Sözleri Scrapper
+- Sınırsız Kuyruk
 
-## Commands 🛠
+## Komutlar Aşağıdadır.🛠
 
-- `/play <song name>` - play song you requested
-- `/playlist` - Show now playing list
-- `/song <song name>` - download songs you want quickly
-- `/search <query>` - search videos on youtube with details
-- `/vsong <song name>` - download videos you want quickly
-- `/lyric <song name>` - lyrics scrapper
+- '/play <song name>' - istediğiniz şarkıyı çalın
+- '/playlist' - Şimdi çalma listesini göster
+- '/song <song name>' - istediğiniz şarkıları hızlı bir şekilde indirin
+- '/search <query>' - youtube'da detayları içeren videoları arayın
+- '/vsong <song adı>' - istediğiniz videoları hızlı bir şekilde indirin
+- '/lirik <song name>' - şarkı sözleri kazıyıcı
 
-#### Admins Only 👷‍♂️
-- `/player` - open music player settings panel
-- `/pause` - pause song play
-- `/resume` - resume song play
-- `/skip` - play next song
-- `/end` - stop music play
-- `/musicplayer on` - to disable music player in your group
-- `/musicplayer off` - to enable music player in your group
-- `/userbotjoin` - invite assistant to your chat
-- `/userbotleave` - remove assistant from your chat
-- `/reload` - Refresh admin list
-- `/uptime` - check the bot uptime status
-- `/ping` - check the bot ping status
+#### Yalnızca Yöneticiler 👷‍♂️
+- '/player' - açık müzik çalar ayarları paneli
+- '/pause' - şarkı çalmayı duraklat
+- '/resume' - şarkı çalmaya devam et
+- '/skip' - sonraki şarkıyı çal
+- '/end' - müzik çalmayı durdur
+- '/musicplayer açık' - grubunuzdaki müzik çaları devre dışı bırakmak için
+- '/musicplayer kapalı' - grubunuzda müzik çaları etkinleştirmek için
+- '/userbotjoin' - asistanı sohbetinize davet edin
+- '/userbotleave' - asistanı sohbetinizden çıkarın
+- '/reload' - Yönetici listesini yenile
+- '/çalışma süresi' - botun çalışma süresi durumunu kontrol edin
+- '/ping' - bot ping durumunu kontrol edin
 
-### Sudo User 🧙‍♂️
-- `/pmpermit on | off` turn on/off the assistant pmpermit
-- `/userbotleaveall` - order the assistant to leave all groups
-- `/gcast` - send a broadcast message
+### Sudo Kullanıcısı 🧙‍♂️
+- '/pmpermit on | kapalı' yardımcı pmpermit'i açma/kapatma
+- '/userbotleaveall' - asistana tüm grupları terk etmesini emret
+- '/gcast' - yayın mesajı gönderin
 
 ### pm-permit 💬
-- `.yes` - approve user for sending message to assistant
-- `.no` - disapprove user for sending message to assistant
+- '.yes' - kullanıcının asistana mesaj göndermesini onaylayın
+- '.no' - kullanıcıyı asistana mesaj gönderdiği için onaylayarak
 
-## 🔎 Support Inline Search
+## 🔎 Satır içi aramayı destekleyin
 
 ## Heroku Deployment 💜
 The easy way to host this bot, deploy to Heroku
