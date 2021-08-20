@@ -40,12 +40,12 @@
 
 ## Komutlar Aşağıdadır.🛠
 
-- '/play <song name>' - istediğiniz şarkıyı çalın
-- '/playlist' - Şimdi çalma listesini göster
-- '/song <song name>' - istediğiniz şarkıları hızlı bir şekilde indirin
-- '/search <query>' - youtube'da detayları içeren videoları arayın
-- '/vsong <song adı>' - istediğiniz videoları hızlı bir şekilde indirin
-- '/lirik <song name>' - şarkı sözleri kazıyıcı
+-'/play <song name>' - istediğiniz şarkıyı çalın
+-'/playlist' - Şimdi çalma listesini göster
+-'/song <song name>' - istediğiniz şarkıları hızlı bir şekilde indirin
+-'/search <query>' - youtube'da detayları içeren videoları arayın
+-'/vsong <song adı>' - istediğiniz videoları hızlı bir şekilde indirin
+-'/lirik <song name>' - şarkı sözleri kazıyıcı
 
 #### Yalnızca Yöneticiler 👷‍♂️
 - '/player' - açık müzik çalar ayarları paneli
