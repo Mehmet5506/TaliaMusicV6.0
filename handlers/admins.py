@@ -1,4 +1,4 @@
-# Copyright (C) 2021 CyberMusicProject
+# Copyright (C) 2021 TaliaMusicProject
 
 
 from asyncio import QueueEmpty
