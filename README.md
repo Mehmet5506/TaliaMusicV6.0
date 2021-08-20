@@ -40,12 +40,12 @@
 
 ## Komutlar Aşağıdadır.🛠
 
--'/play <song name>' - istediğiniz şarkıyı çalın
--'/playlist' - Şimdi çalma listesini göster
--'/song <song name>' - istediğiniz şarkıları hızlı bir şekilde indirin
--'/search <query>' - youtube'da detayları içeren videoları arayın
--'/vsong <song adı>' - istediğiniz videoları hızlı bir şekilde indirin
--'/lirik <song name>' - şarkı sözleri kazıyıcı
+- '/play <song name>' - istediğiniz şarkıyı çalın
+- '/playlist' - Şimdi çalma listesini göster
+- '/song <song name>' - istediğiniz şarkıları hızlı bir şekilde indirin
+- '/search <query>' - youtube'da detayları içeren videoları arayın
+- '/vsong <song adı>' - istediğiniz videoları hızlı bir şekilde indirin
+- '/lirik <song name>' - şarkı sözleri kazıyıcı
 
 #### Yalnızca Yöneticiler 👷‍♂️
 - '/player' - açık müzik çalar ayarları paneli
@@ -72,22 +72,22 @@
 
 ## 🔎 Satır içi aramayı destekleyin
 
-## Heroku Deployment 💜
-The easy way to host this bot, deploy to Heroku
+## Heroku Dağıtımı 💜
+Bu bota ev sahipliği yapmanın kolay yolu, Heroku'ya dağıtın
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Mehmet5506/TaliaMusic99)
 
-## Railway Deployment 🚄
-For deployment on railway you can see the full of [Necessary Variables Here](https://github.com/aryazakaria01/CBMusicBot/blob/main/example.env), make sure you fill all of it.
+## Demiryolu Dağıtımı 🚄
+Demiryolunda konuşlandırma için [Necessary Variables Here](https://github.com/aryazakaria01/CBMusicBot/blob/main/example.env), hepsini doldurduğundan emin ol.
 
 [![Deploy+on+Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/aryazakaria01/CBMusicBot&envs=SESSION_NAME,BOT_TOKEN,BOT_USERNAME,BOT_NAME,GROUP_SUPPORT,ASSISTANT_NAME,OWNER_NAME,BG_IMAGE,UPDATES_CHANNEL,API_ID,API_HASH,PMPERMIT,SUDO_USERS,DURATION_LIMIT,THUMB_IMG)
 
-### Credits 💖
+### Kredi 💖
 - [Arya Zakaria](https://github.com/aryazakaria01): Dev
 - [Laky](https://github.com/Laky-64) & [Andrew](https://github.com/AndrewLaneX): PyTgCalls
 - [Original Repo](https://github.com/suprojects/CallsMusic)
 - [Cyber Music Bot](https://t.me/CyberMusikBot) Our Music Bot
 - [RojSerBest](https://github.com/rojserbest) CallsMusic Developer
 
-### Support & Updates 🎑
+### Destek ve Güncelleştirmeler 🎑
 <a href="https://t.me/CyberSupportGroup"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/CyberMusicProject"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
