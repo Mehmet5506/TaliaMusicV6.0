@@ -4,8 +4,6 @@
  
 <p align="center">
     <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&color=red" /></a>
-    <a href="https://github.com/aryazakaria01/CBMusicBot/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-red.svg?style=flat-square" /></a>
-    <a href="https://app.codacy.com/gh/aryazakaria01/CBMusicBot/dashboard"> <img src="https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=red&logo=codacy&style=flat-square" alt="Codacy" /></a><br>
     <a href="https://github.com/Mehmet5506/TaliaMusicV6.0"> <img src="https://img.shields.io/github/repo-size/aryazakaria01/CBMusicBot?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
 </p>
 
