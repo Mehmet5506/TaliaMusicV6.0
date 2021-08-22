@@ -137,7 +137,7 @@ async def playlist(client, message):
 # ============================= Settings =========================================
 def updated_stats(chat, queue, vol=100):
     if chat.id in callsmusic.pytgcalls.active_calls:
-        stats = "Pengaturan dari **{}**".format(chat.title)
+        stats = "Ayarlar**{}**".format(chat.title)
         if len(que) > 0:
             stats += "\n\n"
             stats += "Ses: {}%\n".format(vol)
@@ -202,34 +202,34 @@ async def hfmm(_, message):
         return
     if len(message.command) != 2:
         await message.reply_text(
-            "**I'm only know** `/musicplayer on` **and** `/musicplayer off`"
+            "**Sadece biliyorum. ** `/müzik çalar açık` **ve** `/Müzik çalar kapalı`"
         )
         return
     status = message.text.split(None, 1)[1]
     message.chat.id
     if status == "ON" or status == "on" or status == "On":
-        lel = await message.reply("`Processing...`")
+        lel = await message.reply("`İşleme Alıdm...`")
         if not message.chat.id in DISABLED_GROUPS:
-            await lel.edit("**Music player already activated.**")
+            await lel.edit("**Müzik çalar zaten etkinleştirildi.**")
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"✅ **Music player has been activated in this chat.** {message.chat.id}"
+            f"✅ **Müzik çalar bu sohbette etkinleştirildi.** {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await message.reply("`Processing...`")
         
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("**Music player already deactivated.**")
+            await lel.edit("**Müzik çalar zaten devre dışı.**")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"✅ **Music player has been deactivated in this chat.** {message.chat.id}"
+            f"✅ **Müzik çalar bu sohbette devre dışı bırakıldı.** {message.chat.id}"
         )
     else:
         await message.reply_text(
-            "**I'm only know** `/musicplayer on` **and** `/musicplayer off`"
+            "**Sadece biliyorum.** `/müzik çalar açık` **ve** `/müzik çalar kapalı`"
         )
 
 
@@ -244,7 +244,7 @@ async def p_cb(b, cb):
     if type_ == "playlist":
         queue = que.get(cb.message.chat.id)
         if not queue:
-            await cb.message.edit("**Nothing is playing ❗**")
+            await cb.message.edit("**Hiçbir şey oynamıyor.❗**")
         temp = []
         for t in queue:
             temp.append(t)
@@ -318,7 +318,7 @@ async def m_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
-        msg = "**Lagu Yang Sedang dimainkan** di {}".format(cb.message.chat.title)
+        msg = "**Çalınan Şarkılar** di {}".format(cb.message.chat.title)
         msg += "\n• "+ now_playing
         msg += "\n• İstek üzerine "+by
         temp.pop(0)
@@ -329,7 +329,7 @@ async def m_cb(b, cb):
                  name = song[0]
                  usr = song[1].mention(style="md")
                  msg += f"\n• {name}"
-                 msg += f"\n• Atas permintaan {usr}\n"
+                 msg += f"\n• İstek üzerine {usr}\n"
         await cb.message.edit(msg)      
                       
     elif type_ == "resume":     
@@ -585,7 +585,7 @@ async def play(_, message: Message):
             while j < 6:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
-                toxxt += f" └ ⚡ Destekçi Talia Music Bot A.I\n\n"
+                toxxt += f" └ ⚡ Destekçi Talia Music.I\n\n"
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
