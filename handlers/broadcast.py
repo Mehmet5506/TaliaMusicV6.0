@@ -28,8 +28,8 @@ async def broadcast(_, message: Message):
             try:
                 await veez.send_message(dialog.chat.id, lmao)
                 sent = sent+1
-                await wtf.edit(f"`Broadcasting...` \n\n**Sent to:** `{sent}` chats \n**Failed in:** {failed} chats")
+                await wtf.edit(f"`Yayın...` \n\n**Gönderileceği yer:** `{sent}` chats \n**Başarısız oldu:** {failed} chats")
                 await asyncio.sleep(3)
             except:
                 failed=failed+1
-        await message.reply_text(f"`Gcast succesfully` \n\n**Sent to:** `{sent}` chats \n**Failed in:** {failed} chats")
+        await message.reply_text(f"`Gcast başarıyla` \n\n**Gönderileceği yer:** `{sent}` chats \n**Başarısız oldu:** {failed} chats")
