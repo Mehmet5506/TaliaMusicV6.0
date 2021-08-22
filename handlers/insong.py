@@ -10,7 +10,7 @@ from callsmusic.callsmusic import client as veez
 async def songs(client, message):
     try:
         if len(message.command) < 2:
-            await message.reply_text("✘ **sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ.**\n\n**ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴀ ᴠᴀʟɪᴅ sᴏɴɢ ɴᴀᴍᴇ.**")
+            await message.reply_text("✘ **Şarkı bulunamadı.**\n\n**Lütfen geçerli bir şarkı adı verin.**")
             return
         text = message.text.split(None, 1)[1]
         results = await veez.get_inline_bot_results(1872165533, f"music {text}")
@@ -18,4 +18,4 @@ async def songs(client, message):
             message.chat.id, results.query_id, results.results[0].id
         )
     except Exception:
-        await message.reply_text("✘ **sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ.**")
+        await message.reply_text("✘ **Şarkı bulunamadı.**")
