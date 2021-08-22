@@ -15,18 +15,18 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 async def ytsearch(_, message: Message):
     try:
         if len(message.command) < 2:
-            await message.reply_text("/search needs an argument!")
+            await message.reply_text("/aramanın bağımsız değişkene ihtiyacı var!")
             return
         query = message.text.split(None, 1)[1]
-        m = await message.reply_text("🔎 **Searching**")
+        m = await message.reply_text("🔎 **Arıyorum**")
         results = YoutubeSearch(query, max_results=5).to_dict()
         i = 0
         text = ""
         while i < 5:
-            text += f"**Judul:** `{results[i]['title']}`\n"
-            text += f"**Durasi:** {results[i]['duration']}\n"
-            text += f"**Views:** {results[i]['views']}\n"
-            text += f"**Channel:** {results[i]['channel']}\n"
+            text += f"**Başlık:** `{results[i]['title']}`\n"
+            text += f"**Süre:** {results[i]['duration']}\n"
+            text += f"**Görünümler:** {results[i]['views']}\n"
+            text += f"**Kanal:** {results[i]['channel']}\n"
             text += f"https://www.youtube.com{results[i]['url_suffix']}\n\n"
             i += 1
         await m.edit(text, disable_web_page_preview=True)
