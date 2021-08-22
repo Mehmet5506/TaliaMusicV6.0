@@ -22,7 +22,7 @@ async def update_admin(client, message):
     for u in new_ads:
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
-    await message.reply_text("✔ ʙᴏᴛ **ʀᴇʟᴏᴀᴅᴇᴅ ᴄᴏʀʀᴇᴄᴛʟʏ !**\n✔ **ᴀᴅᴍɪɴ ʟɪsᴛ** ʜᴀs ʙᴇᴇɴ **ᴜᴘᴅᴀᴛᴇᴅ !**")
+    await message.reply_text("✔ 𝙱𝙾𝚃 ** 𝙳𝙾𝙶𝚁𝚄 𝚈Ü𝙺𝙻𝙴𝙽𝙳İ ! **\n✔ **𝚈Ö𝙽𝙴𝚃İ𝙲İ 𝙻İ𝚂𝚃𝙴𝚂İ** 𝙳𝙾Ğ𝚁𝚄 **𝙶Ü𝙽𝙲𝙴𝙻𝙻𝙴𝙽𝙼İŞ !**")
 
 
 @Client.on_message(command("pause") & other_filters)
