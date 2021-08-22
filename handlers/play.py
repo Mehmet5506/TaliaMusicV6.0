@@ -508,7 +508,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 𝙼𝙴𝙽ü", callback_data="menu"),
+                    InlineKeyboardButton("🖥️ 𝙼𝙴𝙽ü", callback_data="menu"),
                     InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/SohbetDestek")
@@ -555,7 +555,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 𝙼𝙴𝙽ü", callback_data="menu"),
+                    InlineKeyboardButton("🖥️ 𝙼𝙴𝙽ü", callback_data="menu"),
                     InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/KanalEfsanestar")
@@ -639,7 +639,7 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 𝙼𝙴𝙽ü", callback_data="menu"),
+                    InlineKeyboardButton("🖥️ 𝙼𝙴𝙽ü", callback_data="menu"),
                     InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/SohbetDestek")
@@ -738,7 +738,7 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 𝙼𝙴𝙽ü", callback_data="menu"),
+                    InlineKeyboardButton("🖥️ 𝙼𝙴𝙽ü", callback_data="menu"),
                     InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/Sohbetdestek")
