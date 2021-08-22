@@ -1,7 +1,7 @@
 {
     "name": "Voice Music Bot",
     "logo": "https://telegra.ph/file/bad69dc7929731b11e056.jpg",
-    "description": "Cyber Music project allow you to stream music trought the telegram voice chat feature.",
+    "description": "Talia Müzik projesi, telegram sesli sohbet özelliğine, Müzik akışı yapmanızı sağlar.",
     "keywords": ["music", "voice chat", "telegram"],
     "repository": "https://github.com/Mehmet5506/TaliaMusic99",
     "stack": "container",
@@ -30,12 +30,12 @@
             "value": ""
         },
         "BG_IMAGE": {
-            "description": "fill with your costum background image link",
+            "description": "arka plan resim bağlantınızla doldurma",
             "required": false,
             "value": "https://i.ibb.co/3mB3sKc/288e6c40a049f4c9b3639bd89e0c9f8e.jpg"
         },
         "THUMB_IMG": {
-            "description": "fill with costum thumbnail image it's different with bg_image",
+            "description": "küçük resim görüntüsüyle doldurmak bg_image",
             "required": false,
             "value": ""
         },
@@ -57,12 +57,12 @@
             "required": true
         },
         "DURATION_LIMIT": {
-            "description": "max durasi untuk video yang diunduh (dakikalar içinde).",
+            "description": "indirilen video için en fazla süre (dakikalar içinde).",
             "required": true,
             "value": "60"
         },
         "PMPERMIT": {
-            "description": "pm-permit for assistant.",
+            "description": "pm-permit asistan için.",
             "required": false,
             "value": "ENABLE"
         },
@@ -72,7 +72,7 @@
             "value": ""
         },
         "GROUP_SUPPORT": {
-            "description": "isi dengan username grup kamu, Atlamanız yoksa",
+            "description": "grup kullanıcı adınızla doldurma, Atlamanız yoksa",
             "required": false,
             "value": ""
         }
