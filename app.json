@@ -32,7 +32,7 @@
         "BG_IMAGE": {
             "description": "fill with your costum background image link",
             "required": false,
-            "value": "https://telegra.ph/file/bb35b7f4bca83551802d6.png"
+            "value": "https://i.ibb.co/3mB3sKc/288e6c40a049f4c9b3639bd89e0c9f8e.jpg"
         },
         "THUMB_IMG": {
             "description": "fill with costum thumbnail image it's different with bg_image",
@@ -69,12 +69,12 @@
         "UPDATES_CHANNEL": {
             "description": "isi dengan username channel kamu, jika tidak punya lewati saja",
             "required": false,
-            "value": "TaliaMusicProject"
+            "value": ""
         },
         "GROUP_SUPPORT": {
             "description": "isi dengan username grup kamu, jika tidak punya skip saja",
             "required": false,
-            "value": "TaliaSupportGroup"
+            "value": ""
         }
     },
     "buildpacks": [
