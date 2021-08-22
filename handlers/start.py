@@ -37,7 +37,7 @@ async def start_(client: Client, message: Message):
 
 💡 **Ü𝚉𝙴𝚁İ𝙽𝙴 𝚃𝙸𝙺𝙻𝙰𝚈𝙰𝚁𝙰𝙺 𝙱𝙾𝚃'𝚄𝙽 𝚃Ü𝙼 𝙺𝙾𝙼𝚄𝚃𝙻𝙰𝚁𝙸𝙽𝙸 𝚅𝙴 𝙽𝙰𝚂𝙸𝙻 Ç𝙰𝙻𝙸Ş𝚃𝙸Ğ𝙸𝙽𝙸 ÖĞ𝚁𝙴𝙽İ𝙽. » 📚 𝙺𝙾𝙼𝚄𝚃𝙻𝙰𝚁 𝙳ÜĞ𝙼𝙴𝚂İ!**
 
-❓ **𝙱𝚄 𝙱𝙾𝚃'𝚄𝙽 𝚃Ü𝙼 Ö𝚉𝙴𝙻𝙻İ𝙺𝙻𝙴𝚁İ 𝙷𝙰𝙺𝙺𝙸𝙽𝙳𝙰 𝙳𝙰𝙷𝙰 𝙵𝙰𝚉𝙻𝙰 𝙱İ𝙻𝙶İ İÇİ𝙽, 𝚂𝙰𝙳𝙴𝙲𝙴 𝚈𝙰𝚉𝙸𝙽𝙸𝚉 /help**
+❓ **𝙱𝚄 𝙱𝙾𝚃'𝚄𝙽 𝚃Ü𝙼 Ö𝚉𝙴𝙻𝙻İ𝙺𝙻𝙴𝚁İ 𝙷𝙰𝙺𝙺𝙸𝙽𝙳𝙰 𝙳𝙰𝙷𝙰 𝙵𝙰𝚉𝙻𝙰 𝙱İ𝙻𝙶İ İÇİ𝙽, 𝚂𝙰𝙳𝙴𝙲𝙴 𝙱𝙰𝚂𝙸𝙽𝙸𝚉 /help**
 
 ✂ **𝚅𝙲𝙶'𝙳𝙴 𝙼Ü𝚉İ𝙺 Ç𝙰𝙻𝙼𝙰𝙺 İÇİ𝙽 𝙼𝙰𝙷𝙾 𝙰Ğ𝙰 𝚃𝙰𝚁𝙰𝙵𝙸𝙽𝙳𝙰𝙽 𝚈𝙰𝙿𝙸𝙻𝙼𝙸Ş𝚃𝙸𝚁.**
 </b>""",
@@ -80,10 +80,10 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "☢ ɢʀᴏᴜᴘ", url=f"https://t.me/SohbetSkayfall"
+                        "☢ 𝙶𝚁𝚄𝙿", url=f"https://t.me/SohbetSkayfall"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/SohbetDestek"
+                        "📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/SohbetDestek"
                     )
                 ]
             ]
@@ -98,7 +98,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="✔ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ", url=f"https://t.me/Efsanestar_bot?start=help"
+                        text="✔ 𝙱𝙴𝙽İ 𝙽𝙰𝚂𝙸𝙻 𝙺𝚄𝙻𝙻𝙰𝙽𝙸𝚁𝚂𝙸𝙽", url=f"https://t.me/Efsanestar_bot?start=help"
                     )
                 ]
             ]
@@ -109,7 +109,7 @@ async def help(client: Client, message: Message):
 async def help_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Merhaba {message.from_user.mention()}, yardım menüsüne hoş geldiniz✨
-\n📙 BENI NASIL KULLANARSIN?
+\n📙 𝙱𝙴𝙽İ 𝙽𝙰𝚂𝙸𝙻 𝙺𝚄𝙻𝙻𝙰𝙽𝙸𝚁𝚂𝙸𝙽?
 \n1. first add me to your group.
 2. promote me as admin and give all permission.
 3. then, add @taliaMusicasistant to your group or type /userbotjoin.
@@ -157,15 +157,15 @@ async def help_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "☣ ɢʀᴏᴜᴘ", url=f"https://t.me/Sohbetneresi"
+                        "☣ 𝙶𝚁𝚄𝙿", url=f"https://t.me/Sohbetneresi"
                     ),
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/SohbetDestek"
+                        "📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/SohbetDestek"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "♞🏻‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"https://t.me/Mahoaga"
+                        "♞🏻‍💻 𝙶𝙴𝙻İŞ𝚃İ𝚁İ𝙲İ", url=f"https://t.me/Mahoaga"
                     )
                 ]
             ]
