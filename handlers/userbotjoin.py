@@ -34,12 +34,12 @@ async def addchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
+            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} userbot için yoğun katılım istekleri nedeniyle grubunuza katılamadım! Kullanıcının grupta yasaklı olmadığından emin olun."
             "\n\nVeya Grubunuza el ile Asisstant ekleyin ve yeniden deneyin</b>",
         )
         return
     await message.reply_text(
-        "<b>helper userbot joined your chat</b>",
+        "<b>yardımcı userbot sohbetinize katıldı</b>",
     )
 
 
@@ -51,7 +51,7 @@ async def rem(USER, message):
     except:
         await message.reply_text(
             f"<b>User couldn't leave your group! May be floodwaits."
-            "\n\nOr manually kick me from to your Group</b>",
+            "\n\nYa da beni manuel olarak grubunuza tekmelersiniz.</b>",
         )
         return
     
@@ -65,10 +65,10 @@ async def bye(client, message):
             try:
                 await USER.leave_chat(dialog.chat.id)
                 left = left+1
-                await lol.edit(f"Assistant leaving... Left: {left} chats. Failed: {failed} chats.")
+                await lol.edit(f"Asistan ayrılıyor... Left: {left} chats. Failed: {failed} chats.")
             except:
                 failed=failed+1
-                await lol.edit(f"Assistant leaving... Left: {left} chats. Failed: {failed} chats.")
+                await lol.edit(f"Asistan ayrılıyor... Left: {left} chats. Failed: {failed} chats.")
             await asyncio.sleep(0.7)
         await client.send_message(message.chat.id, f"Left {left} chats. Failed {failed} chats.")
 
