@@ -1,5 +1,5 @@
 {
-    "name": "Talia Music Bot",
+    "name": "Voice Music Bot",
     "logo": "https://telegra.ph/file/bad69dc7929731b11e056.jpg",
     "description": "Cyber Music project allow you to stream music trought the telegram voice chat feature.",
     "keywords": ["music", "voice chat", "telegram"],
@@ -7,25 +7,25 @@
     "stack": "container",
     "env": {
         "SESSION_NAME": {
-            "description": "fill with the pyrogram session string",
+            "description": "pyrogram oturum dizesiyle doldurma",
             "required": true
         },
         "BOT_TOKEN": {
-            "description": "your bot token from @BotFather",
+            "description": "bot jetonunuz @BotFather",
             "required": true
         },
         "BOT_NAME": {
-            "description": "your music bot name.",
+            "description": "müzik botu adınız.",
             "required": false,
             "value": ""
         },
         "BOT_USERNAME": {
-            "description": "fill with your bot username without @",
+            "description": "bot kullanıcı adınızla doldurmadan @",
             "required": true,
             "value": ""
         },
         "ASSISTANT_NAME": {
-            "description": "fill with the assistant username without @",
+            "description": "yardımcı kullanıcı adı ile doldurma @",
             "required": true,
             "value": ""
         },
@@ -37,27 +37,27 @@
         "THUMB_IMG": {
             "description": "fill with costum thumbnail image it's different with bg_image",
             "required": false,
-            "value": "https://telegra.ph/file/e9a4d6655e5ddf51f9160.jpg"
+            "value": ""
         },
         "OWNER_NAME": {
-            "description": "fill with your username without @",
+            "description": "kullanıcı adınızla doldurmadan @",
             "required": false,
-            "value": "TurkisDev"
+            "value": ""
         },
         "API_ID": {
-            "description": "your App ID from my.telegram.org/apps",
+            "description": "uygulama kimliğinizden.telegram.org/apps",
             "required": true
         },
         "API_HASH": {
-            "description": "your Api hash from my.telegram.org/apps",
+            "description": "benim api karma.telegram.org/apps",
             "required": true
         },
         "SUDO_USERS": {
-            "description": "list id untuk daftar anggota sudo (pisahkan dengan spasi).",
+            "description": "sudo üye listesi listesi kimliği (Boşluklara göre ayır).",
             "required": true
         },
         "DURATION_LIMIT": {
-            "description": "max durasi untuk video yang diunduh (dalam menit).",
+            "description": "max durasi untuk video yang diunduh (dakikalar içinde).",
             "required": true,
             "value": "60"
         },
@@ -67,12 +67,12 @@
             "value": "ENABLE"
         },
         "UPDATES_CHANNEL": {
-            "description": "isi dengan username channel kamu, jika tidak punya lewati saja",
+            "description": "Kanal kullanıcı adınız ile doldurun, Eğer iznin yoksa.",
             "required": false,
             "value": ""
         },
         "GROUP_SUPPORT": {
-            "description": "isi dengan username grup kamu, jika tidak punya skip saja",
+            "description": "isi dengan username grup kamu, Atlamanız yoksa",
             "required": false,
             "value": ""
         }
