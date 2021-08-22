@@ -53,7 +53,7 @@ async def stream(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await lel.edit_text("♨ ʏᴏᴜ ᴅɪᴅ ɴᴏᴛ ɢɪᴠᴇ ᴍᴇ ᴀᴜᴅɪᴏ ғɪʟᴇ ᴏʀ ʏᴛ ʟɪɴᴋ ᴛᴏ sᴛʀᴇᴀᴍ!")
+        return await lel.edit_text("♨ 𝙱𝙰𝙽𝙰 𝚂𝙴𝚂 𝙳𝙾𝚂𝚈𝙰𝚂𝙸𝙽𝙸 𝚅𝙴𝚈𝙰 𝚈𝚃 𝙱𝙰Ğ𝙻𝙰𝙽𝚃𝙸𝚂𝙸𝙽𝙸 𝚅𝙴𝚁𝙼𝙴𝙳İ𝙽İ𝚉!")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
@@ -68,6 +68,6 @@ async def stream(_, message: Message):
         await message.reply_photo(
         photo=f"{AUD_IMG}",
         reply_markup=keyboard,
-        caption=f"🎧 **Şİ𝙼𝙳İ 𝙾𝚈𝙽𝚄𝚈𝙾𝚁** İ𝚂𝚃𝙴𝙽İ𝙻𝙴𝙽 𝙱İ𝚁 Ş𝙰𝚁𝙺𝙸 {costumer} !\n\n✈  {bn}"
+        caption=f"🎧 **Şİ𝙼𝙳İ 𝙾𝚈𝙽𝚄𝚈𝙾𝚁** İ𝚂𝚃𝙴𝙽İ𝙻𝙴𝙽 𝙱İ𝚁 Ş𝙰𝚁𝙺𝙸 {costumer} !\n\n✈ 𝚃𝙰𝙻İ𝙰 𝙼Ü𝚉İ𝙺 𝚃𝙰𝚁𝙰𝙵𝙸𝙽𝙳𝙰𝙽 𝙳𝙴𝚂𝚃𝙴𝙺𝙻𝙴𝙽𝙼𝙴𝙺𝚃𝙴𝙳İ𝚁 {bn}"
         )   
         return await lel.delete()
