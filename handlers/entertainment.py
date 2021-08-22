@@ -1,6 +1,6 @@
 # Module by https://github.com/tofikdn
 # Copyright (C) 2021 TdMusic
-# Ported by @aryazakaria01 for TaliaMusicBot
+# Ported by @Maho ağa for TaliaMusicBot
 
 import requests
 from pyrogram import Client
