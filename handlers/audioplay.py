@@ -19,7 +19,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def stream(_, message: Message):
 
-    lel = await message.reply("☢ **ᴘʀᴏᴄᴇssɪɴɢ** sᴏᴜɴᴅ...")
+    lel = await message.reply("☢ **İŞ𝙻𝙴𝙼𝙴 𝙰𝙻𝙸𝙽𝙳𝙸** 𝚂𝙴𝚂...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -27,7 +27,7 @@ async def stream(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="📣 ᴄʜᴀɴɴᴇʟ",
+                        text="📣 𝙺𝙰𝙽𝙰𝙻",
                         url=f"https://t.me/SohbetDestek"),
                     InlineKeyboardButton(
                         text="♞ ᴅᴇᴠ's",
@@ -60,7 +60,7 @@ async def stream(_, message: Message):
         await message.reply_photo(
         photo=f"{QUE_IMG}",
         reply_markup=keyboard,
-        caption=f"#⌛ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛᴇᴅ sᴏɴɢ ᴡᴀs ᴀᴅᴅᴇᴅ ᴛᴏ **Sıraya** ᴀᴛ ᴘᴏsɪᴛɪᴏɴ {position}!\n\n✈ ᴘᴏᴡᴇʀᴇᴅ ʙʏ {bn}")
+        caption=f"#⌛ İ𝚂𝚃𝙴𝙽𝙴𝙽 Ş𝙰𝚁𝙺𝙸 **Sıraya** 𝙺𝙾𝙽𝚄𝙼𝙳𝙰 𝙴𝙺𝙻𝙴𝙽𝙳İ {position}!\n\n✈ 𝚈𝙾𝚄𝚃𝚄𝙱𝙴 𝚃𝙰𝚁𝙰𝙵𝙸𝙽𝙳𝙰𝙽 𝙳𝙴𝚂𝚃𝙴𝙺𝙻𝙴𝙽𝙼𝙴𝙺𝚃𝙴𝙳İ𝚁 {bn}")
         return await lel.delete()
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
@@ -68,6 +68,6 @@ async def stream(_, message: Message):
         await message.reply_photo(
         photo=f"{AUD_IMG}",
         reply_markup=keyboard,
-        caption=f"🎧 **ɴᴏᴡ ᴘʟᴀʏɪɴɢ** ᴀ sᴏɴɢ ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ {costumer} !\n\n✈ ᴘᴏᴡᴇʀᴇᴅ ʙʏ {bn}"
+        caption=f"🎧 **Şİ𝙼𝙳İ 𝙾𝚈𝙽𝚄𝚈𝙾𝚁** İ𝚂𝚃𝙴𝙽İ𝙻𝙴𝙽 𝙱İ𝚁 Ş𝙰𝚁𝙺𝙸 {costumer} !\n\n✈  {bn}"
         )   
         return await lel.delete()
