@@ -575,7 +575,7 @@ async def play(_, message: Message):
         try:
           results = YoutubeSearch(query, max_results=6).to_dict()
         except:
-          await lel.edit("**Lütfen çalmak istediğiniz şarkının adını verin !**")
+          await lel.edit("**Please give me the name of the song you want to play!**")
         # veez project
         try:
             toxxt = "⚡ __Choose a song to play:__\n\n"
