@@ -585,7 +585,7 @@ async def play(_, message: Message):
             while j < 6:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
-                toxxt += f" └ ⚡ Destekçi Talia Music .I\n\n"
+                toxxt += f" └ ⚡  .I\n\n"
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
@@ -615,7 +615,7 @@ async def play(_, message: Message):
             return
             # veez project
         except:
-            await lel.edit("__Seçecek başka sonuç yok, Otomatik oynatılıyor...__")
+            await lel.edit("__No other results to choose from, Autoplay...__")
                         
             # print(results)
             try:
