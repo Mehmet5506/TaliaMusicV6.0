@@ -575,7 +575,7 @@ async def play(_, message: Message):
         try:
           results = YoutubeSearch(query, max_results=6).to_dict()
         except:
-          await lel.edit("**Please give me the name of the song you want to play!**")
+          await lel.edit("**Lütfen bana çalmak istediğiniz şarkının adını verin.!**")
         # veez project
         try:
             toxxt = "⚡ __Choose a song to play:__\n\n"
@@ -701,9 +701,9 @@ async def lol_cb(b, cb):
         return
     useer_id = int(useer_id)
     if cb.from_user.id != useer_id:
-        await cb.answer("You are not people who requested this song!", show_alert=True)
+        await cb.answer("Siz bu şarkıyı isteyen insanlar değilsiniz.!", show_alert=True)
         return
-    #await cb.message.edit("🔁 **İşleme aldım...**")
+    #await cb.message.edit("🔁 **Lütfen bekleyiniz...**")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
