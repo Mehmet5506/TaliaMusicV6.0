@@ -33,13 +33,13 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>✨ **𝙷𝙾Ş𝙶𝙴𝙻𝙳İ𝙽İ𝚉 {message.from_user.first_name}** \n
-💭 **[{BOT_NAME}](https://t.me/{BOT_USERNAME}) 𝚈𝙴𝙽İ 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼'𝙸𝙽 𝚂𝙴𝚂𝙻İ 𝚂𝙾𝙷𝙱𝙴𝚃𝙻𝙴𝚁İ𝚈𝙻𝙴 𝙶𝚁𝚄𝙿𝙻𝙰𝚁𝙸𝙽𝙳𝙰 𝙼Ü𝚉İ𝙺 Ç𝙰𝙻𝙼𝙰𝚂𝙸𝙽𝙰 İ𝚉İ𝙽 𝚅𝙴𝚁İ𝙽 !**
+💭 **[Talia Müzik](https://t.me/Efsanestar_bot) 𝚈𝙴𝙽İ 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼'𝙸𝙽 𝚂𝙴𝚂𝙻İ 𝚂𝙾𝙷𝙱𝙴𝚃𝙻𝙴𝚁İ𝚈𝙻𝙴 𝙶𝚁𝚄𝙿𝙻𝙰𝚁𝙸𝙽𝙳𝙰 𝙼Ü𝚉İ𝙺 Ç𝙰𝙻𝙼𝙰𝚂𝙸𝙽𝙰 İ𝚉İ𝙽 𝚅𝙴𝚁İ𝙽!**
 
 💡 **Ü𝚉𝙴𝚁İ𝙽𝙴 𝚃𝙸𝙺𝙻𝙰𝚈𝙰𝚁𝙰𝙺 𝙱𝙾𝚃'𝚄𝙽 𝚃Ü𝙼 𝙺𝙾𝙼𝚄𝚃𝙻𝙰𝚁𝙸𝙽𝙸 𝚅𝙴 𝙽𝙰𝚂𝙸𝙻 Ç𝙰𝙻𝙸Ş𝚃𝙸Ğ𝙸𝙽𝙸 ÖĞ𝚁𝙴𝙽İ𝙽. » 📚 𝙺𝙾𝙼𝚄𝚃𝙻𝙰𝚁 𝙳ÜĞ𝙼𝙴𝚂İ!**
 
 ❓ **𝙱𝚄 𝙱𝙾𝚃'𝚄𝙽 𝚃Ü𝙼 Ö𝚉𝙴𝙻𝙻İ𝙺𝙻𝙴𝚁İ 𝙷𝙰𝙺𝙺𝙸𝙽𝙳𝙰 𝙳𝙰𝙷𝙰 𝙵𝙰𝚉𝙻𝙰 𝙱İ𝙻𝙶İ İÇİ𝙽, 𝚂𝙰𝙳𝙴𝙲𝙴 𝙱𝙰𝚂𝙸𝙽𝙸𝚉 /help**
 
-✂ **𝚅𝙲𝙶'𝙳𝙴 𝙼Ü𝚉İ𝙺 Ç𝙰𝙻𝙼𝙰𝙺 İÇİ𝙽 𝙼𝙰𝙷𝙾 𝙰Ğ𝙰 𝚃𝙰𝚁𝙰𝙵𝙸𝙽𝙳𝙰𝙽 𝚈𝙰𝙿𝙸𝙻𝙼𝙸Ş𝚃𝙸𝚁.**
+✂ **𝚅𝙲𝙶'𝙳𝙴 𝙼Ü𝚉İ𝙺 Ç𝙰𝙻𝙼𝙰𝙺 İÇİ𝙽 [𝙼𝙰𝙷𝙾 𝙰Ğ𝙰] (hptts://t.me/Mahoaga) 𝚃𝙰𝚁𝙰𝙵𝙸𝙽𝙳𝙰𝙽 𝚈𝙰𝙿𝙸𝙻𝙼𝙸Ş𝚃𝙸𝚁.**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
@@ -54,13 +54,13 @@ async def start_(client: Client, message: Message):
                         "🖥️ 𝙳Ü𝚉𝙴𝙽𝙻𝙴𝙼𝙴 𝚈𝙰𝙿𝙰𝙽", url=f"https://t.me/Mahoaga")
                 ],[
                     InlineKeyboardButton(
-                        "👥 𝚁𝙴𝚂𝙼İ 𝙶𝚁𝚄𝙿", url=f"https://t.me/Sohbetneresi"
+                        "👥 𝚁𝙴𝚂𝙼İ 𝙶𝚁𝚄𝙿", url=f"https://t.me/Taliasohbet"
                     ),
                     InlineKeyboardButton(
                         "📣 𝚁𝙴𝚂𝙼İ 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/SohbetDestek")               
                  ],[
                     InlineKeyboardButton(
-                        "🧪 𝙺𝙰𝚈𝙽𝙰𝙺 𝙺𝙾𝙳𝚄 🧪", url="https://github.com/Mehmet5506/TaliaMusic99"
+                        "🧪 𝙺𝙰𝚈𝙽𝙰𝙺 𝙺𝙾𝙳𝚄 🧪", url="https://t.me/Mahoaga"
                     )
                 ]
             ]
@@ -69,7 +69,7 @@ async def start_(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["start", f"start@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["start", f"start@Efsanestar_bot"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
@@ -115,8 +115,8 @@ async def help_(client: Client, message: Message):
 3. then, add @taliaMusicasistant to your group or type /userbotjoin.
 3. make sure you turn on the voice chat first before start playing music.
 \n💁🏻‍♀️ **tüm kullanıcı için komutlar:**
-\n/play (song name) - play song from youtube
-/stream (reply to audio) - play song using audio file
+\n/play (song name) - youtube'dan şarkı çalmak
+/ytplay (reply to audio) - ses dosyasını kullanarak şarkı çalma
 /playlist - show the list song in queue
 /song (song name) - download song from youtube
 /search (video name) - search video from youtube detailed
