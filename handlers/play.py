@@ -121,7 +121,7 @@ async def playlist(client, message):
     now_playing = temp[0][0]
     by = temp[0][1].mention(style="md")
     msg = "**Çalınan Şarkılar** di {}".format(message.chat.title)
-    msg += "\n• "+ Şimdi yürütülen
+    msg += "\n• "+ now_playing
     msg += "\n• İstek üzerine "+by
     temp.pop(0)
     if temp:
