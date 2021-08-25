@@ -15,9 +15,9 @@ from helpers.errors import DurationLimitError
 from helpers.gets import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-@Client.on_message(command("ytplay") & other_filters)
+@Client.on_message(command("oynat") & other_filters)
 @errors
-async def ytplay(_, message: Message):
+async def oynat(_, message: Message):
 
     lel = await message.reply("☢ **İŞ𝙻𝙴𝙼𝙴 𝙰𝙻𝙸𝙽𝙳𝙸** 𝚂𝙴𝚂...")
     sender_id = message.from_user.id
@@ -30,7 +30,7 @@ async def ytplay(_, message: Message):
                         text="📣 𝙺𝙰𝙽𝙰𝙻",
                         url=f"https://t.me/SohbetDestek"),
                     InlineKeyboardButton(
-                        text="♞ ᴅᴇᴠ's",
+                        text="♞ Düznleyen",
                         url=f"https://t.me/Mahoaga")
                 ]
             ]
@@ -53,7 +53,7 @@ async def ytplay(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await lel.edit_text("♨ 𝙱𝙰𝙽𝙰 𝚂𝙴𝚂 𝙳𝙾𝚂𝚈𝙰𝚂𝙸𝙽𝙸 𝚅𝙴𝚈𝙰 𝚈𝚃 𝙱𝙰Ğ𝙻𝙰𝙽𝚃𝙸𝚂𝙸𝙽𝙸 𝚅𝙴𝚁𝙼𝙴𝙳İ𝙽İ𝚉!")
+        return await lel.edit_text("♨ 𝙱𝙰𝙽𝙰 𝚂𝙴𝚂 𝙳𝙾𝚂𝚈𝙰𝚂𝙸𝙽𝙸 𝚅𝙴𝚈𝙰 𝚈outuBe 𝙱𝙰Ğ𝙻𝙰𝙽𝚃𝙸𝚂𝙸𝙽𝙸 𝚅𝙴𝚁𝙼𝙴𝙳İ𝙽İ𝚉!")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
