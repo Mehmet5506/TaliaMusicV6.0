@@ -110,48 +110,48 @@ async def help_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Merhaba {message.from_user.mention()}, yardım menüsüne hoş geldiniz✨
 \n📙 𝙱𝙴𝙽İ 𝙽𝙰𝚂𝙸𝙻 𝙺𝚄𝙻𝙻𝙰𝙽𝙸𝚁𝚂𝙸𝙽?
-\n1. first add me to your group.
-2. promote me as admin and give all permission.
-3. then, add @taliaMusicasistant to your group or type /userbotjoin.
-3. make sure you turn on the voice chat first before start playing music.
+\n1. önce beni grubunuza ekleyin.
+2. beni yönetici olarak tanıtın ve tüm izinleri verin.
+3. ardından, @taliaMusicasistant grubunuza veya türünüze /userbotjoin.
+3. müzik çalmaya başlamadan önce sesli sohbeti açtığınızdan emin olun.
 \n💁🏻‍♀️ **tüm kullanıcı için komutlar:**
 \n/play (song name) - youtube'dan şarkı çalmak
-/ytplay (reply to audio) - ses dosyasını kullanarak şarkı çalma
-/playlist - show the list song in queue
-/song (song name) - download song from youtube
-/search (video name) - search video from youtube detailed
-/vsong (video name) - download video from youtube detailed
-/lyric - (song name) lyrics scrapper
-/vk (song name) - download song from inline mode
+/oynat (reply to audio) - ses dosyasını kullanarak şarkı çalma youtube linki veya Mp3 oynatıcı
+/playlist - listedeki şarkıyı sırada gösterme
+/song (song name) - youtube'dan şarkı indirme
+/search (video name) - youtube'dan video arama detayı
+/vsong (video name) - youtube'dan video indirme ayrıntılı
+/lyric - (song name) şarkı sözleri scrapper 
+/vk (song name) - şarkıyı satır içi moddan indirme
 \n👷🏻‍♂️ **yöneticiler için komutlar:**
-\n/player - open music player settings panel
-/pause - pause the music streaming
-/resume - resume the music was paused
-/skip - skip to the next song
-/end - stop music streaming
-/userbotjoin - invite assistant join to your group
-/reload - for refresh the admin list
-/cache - for cleared admin cache
-/auth - authorized user for using music bot
-/deauth - unauthorized for using music bot
-/musicplayer (on / off) - disable / enable music player in your group
+\n/player - müzik çalar ayarları panelini açma
+/pause - müzik akışını duraklatma
+/resume - devam et müzik duraklatıldı 
+/skip - sonraki şarkıya atlamak 
+/end - müzik akışını durdurma 
+/userbotjoin - grubunuza asistan katılmayı davet etme 
+/reload - yönetici listesini yenilemek için 
+/cache - temizlenmiş yönetici önbelleği için 
+/auth - müzik botu kullanmak için yetkili kullanıcı 
+/deauth - müzik botu kullanmak için yetkisiz 
+/musicplayer (on / off) - devre dışı bırakmak / etkinleştirmek grubunuzdaki müzik çalar için
 \n🎧 kanal akışı komutları:
-\n/cplay - stream music on channel voice chat
-/cplayer - show the song in streaming
-/cpause - pause the streaming music
-/cresume - resume the streaming was paused
-/cskip - skip streaming to the next song
-/cend - end the streaming music
-/admincache - refresh the admin cache
-\n🧙‍♂️ command for sudo users:
-\n/userbotleaveall - order the assistant to leave from all group
-/gcast - send a broadcast message trought the assistant
+\n/cplay - kanal sesli sohbetinde müzik akışı 
+/cplayer - şarkıyı akışta gösterme 
+/cpause - müzik akışını duraklatma 
+/cresume - akışın duraklatıldığını sürdürme 
+/cskip - akışı bir sonraki şarkıya atlamak 
+/cend - müzik akışını sonlandırmak 
+/admincache - yönetici önbelleğini yenileme 
+\n🧙‍♂️ sudo kullanıcıları için komut:
+\n/userbotleaveall - asistanın tüm gruptan ayrılmasını emretmek 
+/gcast - yayın iletisi gönderme yardımcıya göre 
 \n🎊 **eğlence için komutlar:**
-\n/chika - check it by yourself
-/wibu - check it by yourself
-/asupan - check it by yourself
-/truth - check it by yourself
-/dare - check it by yourself
+\n/chika - kendiniz kontrol edin 
+/wibu - kendiniz kontrol edin 
+/asupan - kendiniz kontrol edin
+/truth - kendiniz kontrol edin
+/dare - kendiniz kontrol edin
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
