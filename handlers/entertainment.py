@@ -7,7 +7,7 @@ from pyrogram import Client
 from config import BOT_USERNAME
 from helpers.filters import command
 
-@Client.on_message(command(["asupan", f"asupan@{BOT_USERNAME}"]))
+@Client.on_message(command(["asupan", f"asupan@Efsanestar_bot]))
 async def asupan(client, message):
     try:
         resp = requests.get("https://tede-api.herokuapp.com/api/asupan/ptl").json()
@@ -17,7 +17,7 @@ async def asupan(client, message):
         await message.reply_text("`sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ ʟᴏʟ...`")
 
 
-@Client.on_message(command(["wibu", f"wibu@{BOT_USERNAME}"]))
+@Client.on_message(command(["wibu", f"wibu@Efsanestar_bot"]))
 async def wibu(client, message):
     try:
         resp = requests.get("https://tede-api.herokuapp.com/api/asupan/wibu").json()
@@ -27,7 +27,7 @@ async def wibu(client, message):
         await message.reply_text("`sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ ʟᴏʟ...`")
 
 
-@Client.on_message(command(["chika", f"chika@{BOT_USERNAME}"]))
+@Client.on_message(command(["chika", f"chika@Efsanestar_bot"]))
 async def chika(client, message):
     try:
         resp = requests.get("https://tede-api.herokuapp.com/api/chika").json()
@@ -37,7 +37,7 @@ async def chika(client, message):
         await message.reply_text("`sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ ʟᴏʟ...`")
 
 
-@Client.on_message(command(["truth", f"truth@{BOT_USERNAME}"]))
+@Client.on_message(command(["truth", f"truth@Efsanestar_bot"]))
 async def truth(client, message):
     try:
         resp = requests.get("https://tede-api.herokuapp.com/api/truth").json()
