@@ -107,7 +107,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     os.remove("background.png")
 
 
-@Client.on_message(command(["playlist", f"playlist@LaCasadeMusic_bot"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["playlist", f"playlist@Efsanestar_bot"]) & filters.group & ~filters.edited)
 async def playlist(client, message):
     global que
     if message.chat.id in DISABLED_GROUPS:
@@ -172,7 +172,7 @@ def r_ply(type_):
     return mar
 
 
-@Client.on_message(command(["player", f"player@LaCasadeMusic_bot"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["player", f"player@Efsanestar_bot"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def settings(client, message):
     playing = None
@@ -423,7 +423,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 **İşleme aldım...**")
+    lel = await message.reply("🔄 **Lütfen bekleyin...**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
     try:
@@ -471,7 +471,7 @@ async def play(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>{user.first_name} bu grupta yasaklandı, yöneticiden @mymusicasistan Elle ekleyin.</i>"
+            f"<i>{user.first_name} bu grupta yasaklandı, yöneticiden @TaliaMusicasistant Elle ekleyin.</i>"
         )
         return
     text_links=None
@@ -503,12 +503,12 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ **Lagu dengan durasi lebih dari** `{DURATION_LIMIT}` **menit tidak dapat diputar!**"
+                f"❌ **Süresi daha fazla olan şarkılar** `{DURATION_LIMIT}` **dakika çalınamaz!**"
             )
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖥️ 𝙼𝙴𝙽ü", callback_data="menu"),
+                    InlineKeyboardButton("📖 𝙼𝙴𝙽ü", callback_data="menu"),
                     InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/kurtadamoyunuu")
@@ -555,7 +555,7 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖥️ 𝙼𝙴𝙽ü", callback_data="menu"),
+                    InlineKeyboardButton("📖 𝙼𝙴𝙽ü", callback_data="menu"),
                     InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/(kurtadamoyunuu")
@@ -578,14 +578,14 @@ async def play(_, message: Message):
           await lel.edit("**Lütfen bana çalmak istediğin şarkının adını ver.!**")
         # veez project
         try:
-            toxxt = "⚡ __Choose a song to play:__\n\n"
+            toxxt = "⚡ __Çalınacak şarkıyı seçme:__\n\n"
             j = 0
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣"]
             while j < 6:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
-                toxxt += f" └ ⚡ Powered by LacadeMusic_bot A.I\n\n"
+                toxxt += f" └ ⚡ Talia Müzik Tarafından.I\n\n"
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
@@ -615,7 +615,7 @@ async def play(_, message: Message):
             return
             # veez project
         except:
-            await lel.edit("__Seçim için başka sonuçlar bulunamadı, Otomatik Başlatılıyor...__")
+            await lel.edit("__Başlatıyorum, Lütfen bekleyiniz...__")
                         
             # print(results)
             try:
@@ -639,10 +639,10 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖥️ 𝙼𝙴𝙽ü", callback_data="menu"),
+                    InlineKeyboardButton("📖 𝙼𝙴𝙽ü", callback_data="menu"),
                     InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/kurtadamoyunuu")
+                    InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/sohbetdestek")
                 ],
             ]
             )
@@ -703,7 +703,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("You are not people who requested this song!", show_alert=True)
         return
-    #await cb.message.edit("🔁 **İşleme aldım...**")
+    #await cb.message.edit("🔁 **Hazırlanıyor...**")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
@@ -738,7 +738,7 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖥️ 𝙼𝙴𝙽ü", callback_data="menu"),
+                    InlineKeyboardButton("📖 𝙼𝙴𝙽ü", callback_data="menu"),
                     InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/kurtadamoyunuu")
