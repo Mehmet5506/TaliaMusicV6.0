@@ -39,7 +39,7 @@ def cb_admin_check(func: Callable) -> Callable:
         if cb.from_user.id in admemes:
             return await func(client, cb)
         else:
-            await cb.answer("You not allowed to do this!", show_alert=True)
+            await cb.answer("Bunu yapmana izin verilmiyor.!", show_alert=True)
             return
     return decorator                                                                       
                                           
@@ -107,7 +107,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     os.remove("background.png")
 
 
-@Client.on_message(command(["playlist", f"playlist@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["playlist", f"playlist@Efsanestar_bot"]) & filters.group & ~filters.edited)
 async def playlist(client, message):
     global que
     if message.chat.id in DISABLED_GROUPS:
@@ -121,7 +121,7 @@ async def playlist(client, message):
     now_playing = temp[0][0]
     by = temp[0][1].mention(style="md")
     msg = "**Çalınan Şarkılar** di {}".format(message.chat.title)
-    msg += "\n• "+ now_playing
+    msg += "\n• "+ Şimdi yürütülen
     msg += "\n• İstek üzerine "+by
     temp.pop(0)
     if temp:
@@ -319,7 +319,7 @@ async def m_cb(b, cb):
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
         msg = "**Çalınan Şarkılar** di {}".format(cb.message.chat.title)
-        msg += "\n• "+ now_playing
+        msg += "\n• "+ Şimdi yürütülen
         msg += "\n• İstek üzerine "+by
         temp.pop(0)
         if temp:
@@ -423,7 +423,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 **İşleme aldım...**")
+    lel = await message.reply("🔄 **Şuan çalınıyor...**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
     try:
@@ -464,7 +464,7 @@ async def play(_, message: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} userbot için katılma isteği nedeniyle grubunuza katılamıyor! Kullanıcıların gruplar halinde yasaklanmamasını sağlama."
-                        f"\n\nVeya ekleyin @{ASSISTANT_NAME} el ile Grubunuza bakın ve yeniden deneyin</b>",
+                        f"\n\nVeya ekleyin @TaliaMusicasistant el ile Grubunuza bakın ve yeniden deneyin</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -578,14 +578,14 @@ async def play(_, message: Message):
           await lel.edit("**Lütfen bana çalmak istediğiniz şarkının adını verin.!**")
         # veez project
         try:
-            toxxt = "⚡ __Choose a song to play:__\n\n"
+            toxxt = "⚡ __Çalınacak şarkıyı seçme:__\n\n"
             j = 0
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣"]
             while j < 6:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
-                toxxt += f" └ ⚡ Powered by LacadeMusic_bot A.I\n\n"
+                toxxt += f" └ ⚡ Destekçi TaliaMusic.I\n\n"
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
@@ -615,7 +615,7 @@ async def play(_, message: Message):
             return
             # veez project
         except:
-            await lel.edit("__No other results to choose from, Autoplay...__")
+            await lel.edit("__Lütfen Bekleyiniz. Otomatik başlıyor...__")
                         
             # print(results)
             try:
