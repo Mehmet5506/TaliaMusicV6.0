@@ -584,8 +584,8 @@ async def oymat(_, message: Message):
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣"]
             while j < 6:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ 💡 **süresi** - {results[j]['duration']}\n"
-                toxxt += f" └ ⚡ Talia Müzik Tarafından.I\n\n"
+                toxxt += f" ├ ⏰ **süresi** - {results[j]['duration']}\n"
+                toxxt += f" └ 👀 **Görüntülenme** - {results[j]['views']}\n\n" 
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
