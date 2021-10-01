@@ -418,7 +418,7 @@ async def m_cb(b, cb):
 
 
 @Client.on_message(command("oynat") & other_filters)
-async def oymat(_, message: Message):
+async def oynat(_, message: Message):
     global que
     global useer
     if message.chat.id in DISABLED_GROUPS:
