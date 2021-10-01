@@ -32,14 +32,14 @@ async def _human_time_duration(seconds):
 @Client.on_message(command("start") & filters.private & ~filters.edited)
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>✨ **𝙷𝙾Ş𝙶𝙴𝙻𝙳İ𝙽İ𝚉 {message.from_user.first_name}** \n
-💭 **[Talia Müzik](https://t.me/Efsanestar_bot) 𝚈𝙴𝙽İ 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼'𝙸𝙽 𝚂𝙴𝚂𝙻İ 𝚂𝙾𝙷𝙱𝙴𝚃𝙻𝙴𝚁İ𝚈𝙻𝙴 𝙶𝚁𝚄𝙿𝙻𝙰𝚁𝙸𝙽𝙳𝙰 𝙼Ü𝚉İ𝙺 Ç𝙰𝙻𝙼𝙰𝚂𝙸𝙽𝙰 İ𝚉İ𝙽 𝚅𝙴𝚁İ𝙽!**
+        f"""<b>✨ **Merhabalar {message.from_user.first_name}** \n
+💭 **[Talia Müzik](https://t.me/Sohbetdestek) Telegramın Sesli sohbetinde bana Müzik çalmam için izin veriniz**
 
-💡 **Ü𝚉𝙴𝚁İ𝙽𝙴 𝚃𝙸𝙺𝙻𝙰𝚈𝙰𝚁𝙰𝙺 𝙱𝙾𝚃'𝚄𝙽 𝚃Ü𝙼 𝙺𝙾𝙼𝚄𝚃𝙻𝙰𝚁𝙸𝙽𝙸 𝚅𝙴 𝙽𝙰𝚂𝙸𝙻 Ç𝙰𝙻𝙸Ş𝚃𝙸Ğ𝙸𝙽𝙸 ÖĞ𝚁𝙴𝙽İ𝙽. » 📚 𝙺𝙾𝙼𝚄𝚃𝙻𝙰𝚁 𝙳ÜĞ𝙼𝙴𝚂İ!**
+💡 **Üzerine tıklayarak komutları çalıştırın ve ögreniniz. » 📚 Komutlar dügmesi!**
 
-❓ **𝙱𝚄 𝙱𝙾𝚃'𝚄𝙽 𝚃Ü𝙼 Ö𝚉𝙴𝙻𝙻İ𝙺𝙻𝙴𝚁İ 𝙷𝙰𝙺𝙺𝙸𝙽𝙳𝙰 𝙳𝙰𝙷𝙰 𝙵𝙰𝚉𝙻𝙰 𝙱İ𝙻𝙶İ İÇİ𝙽, 𝚂𝙰𝙳𝙴𝙲𝙴 𝙱𝙰𝚂𝙸𝙽𝙸𝚉 /help**
+❓ **Bu botun tüm özellikleri hakkında bilgi almak için, yardım basınız. /help**
 
-✂ **𝚅𝙲𝙶'𝙳𝙴 𝙼Ü𝚉İ𝙺 Ç𝙰𝙻𝙼𝙰𝙺 İÇİ𝙽 [𝙼𝙰𝙷𝙾 𝙰Ğ𝙰](hptts://t.me/Mahoaga) 𝚃𝙰𝚁𝙰𝙵𝙸𝙽𝙳𝙰𝙽 𝚈𝙰𝙿𝙸𝙻𝙼𝙸Ş𝚃𝙸𝚁.**
+✂ **Sesli sohbette müzik çalmak için [Talia Resmi Kanal](hptts://t.me/Sohbetdestek) Tarafından yapılmıştır.**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
