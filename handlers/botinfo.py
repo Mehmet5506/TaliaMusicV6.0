@@ -14,9 +14,9 @@ f"""
 ❍ beta-version \n
 👩🏻‍💻 developer:
 ❍ @Mahoaga
-❍ @Byboss\n
+❍ @raconReis\n
 💬 support chat:
-❍ @Sohbetneresi
+❍ @sohbetskyfall 
 📣 updates channel:
 ❍ @SohnetDestek\n
 """
