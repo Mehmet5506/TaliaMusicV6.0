@@ -162,7 +162,7 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "atla")
             ],
             [
-                InlineKeyboardButton("📖 Butonlar", "playlist"),
+                InlineKeyboardButton("📖 Şarkı bilgisi", "playlist"),
             ],
             [       
                 InlineKeyboardButton("❎ Kapat", "cls")
@@ -266,7 +266,7 @@ async def p_cb(b, cb):
 
 
 @Client.on_callback_query(
-    filters.regex(pattern=r"^(oynat|durdur|atla|ayril|puse|devam|menü|cls)$")
+    filters.regex(pattern=r"^(oynat|durdur|atla|son|puse|devam|menü|cls)$")
 )
 @cb_admin_check
 async def m_cb(b, cb):
@@ -372,7 +372,7 @@ async def m_cb(b, cb):
                 
                 ],
                 [
-                    InlineKeyboardButton("📖 Butonlar", "playlist"),
+                    InlineKeyboardButton("📖 Şarkı bilgisi", "playlist"),
                 
                 ],
                 [       
@@ -508,7 +508,7 @@ async def oynat(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Butonları", callback_data="menü"),
+                    InlineKeyboardButton("📖 Butonlar", callback_data="menü"),
                     InlineKeyboardButton("❎ Kapat", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 Kanal", url=f"https://t.me/kurtadamoyunuu")
@@ -555,7 +555,7 @@ async def oynat(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Menü", callback_data="menü"),
+                    InlineKeyboardButton("📖 Butonlar", callback_data="menü"),
                     InlineKeyboardButton("❎ Kapat", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 Kanal", url=f"https://t.me/(kurtadamoyunuu")
