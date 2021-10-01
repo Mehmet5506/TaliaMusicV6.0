@@ -144,7 +144,7 @@ async def help_(client: Client, message: Message):
 /cend - müzik akışını sonlandırmak 
 /admincache - yönetici önbelleğini yenileme 
 \n🧙‍♂️ sudo kullanıcıları için komut:
-\n/userbotleaveall - asistanın tüm gruptan ayrılmasını emretmek 
+\n/asistanayril- asistanın tüm gruptan ayrılmasını emretmek 
 /gcast - yayın iletisi gönderme yardımcıya göre 
 </b>""",
         reply_markup=InlineKeyboardMarkup(
