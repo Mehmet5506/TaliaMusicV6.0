@@ -6,7 +6,7 @@ from callsmusic.callsmusic import client as USER
 from config import SUDO_USERS
 
 
-@Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
+@Client.on_message(filters.command(["asistan"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
 @errors
 async def addchannel(client, message):
@@ -43,24 +43,24 @@ async def addchannel(client, message):
     )
 
 
-@USER.on_message(filters.group & filters.command(["userbotleave"]))
+@USER.on_message(filters.group & filters.command(["userbot"]))
 @authorized_users_only
 async def rem(USER, message):
     try:
         await USER.leave_chat(message.chat.id)
     except:
         await message.reply_text(
-            f"<b>User couldn't leave your group! May be floodwaits."
+            f"<b>Kullanıcı grubunuzdan ayrılamadı! Floodwaits olabilir."
             "\n\nYa da beni manuel olarak grubunuza tekmelersiniz.</b>",
         )
         return
     
-@Client.on_message(filters.command(["userbotleaveall"]))
+@Client.on_message(filters.command(["asistanayril"]))
 async def bye(client, message):
     if message.from_user.id in SUDO_USERS:
         left=0
         failed=0
-        lol = await message.reply("Assistant Leaving all chats")
+        lol = await message.reply("Asistan Tüm sohbetleri bırakma")
         async for dialog in USER.iter_dialogs():
             try:
                 await USER.leave_chat(dialog.chat.id)
