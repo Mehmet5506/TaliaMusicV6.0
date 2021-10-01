@@ -563,7 +563,7 @@ async def oynat(_, message: Message):
             ]
         )
         requested_by = message.from_user.first_name
-        await generate_cover(requested_by, title, views, duration, thumbnail)
+        await generate_cover(title, thumbnail)
         file_path = await converter.convert(youtube.download(url))        
     else:
         query = ""
@@ -573,21 +573,19 @@ async def oynat(_, message: Message):
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
-          results = YoutubeSearch(query, max_results=6).to_dict()
+          results = YoutubeSearch(query, max_results=5).to_dict()
         except:
-          await lel.edit("**Lütfen bana çalmak istediğin şarkının adını ver.!**")
-        # veez project
+          await lel.edit("Give me something to play")
+        # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "⚡ __Çalınacak şarkıyı seç:__\n\n"
+            toxxt = "**__Lütfen çalmak istediğiniz şarkıyı seçin__**\n\n"
             j = 0
             useer=user_name
-            emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣"]
-            while j < 6:
-                toxxt += f"{emojilist[j]} <b>Title - [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})</b>\n"
-                toxxt += f" ╚ <b>Süresi</b> - {results[j]['duration']}\n"
-                toxxt += f" ╚ <b>Görüntülenme</b> - {results[j]['views']}\n"
-                toxxt += f" ╚ <b>Kanak</b> - {results[j]['channel']}\n\n"
-
+            emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣"]
+            while j < 5:
+                toxxt += f"{emojilist[j]} [{results[j]['title'][:24]}...](https://youtube.com{results[j]['url_suffix']})\n"
+                toxxt += f" ├ ⏳ **Süre** - {results[j]['duration']}\n"
+                toxxt += f" └ 👀 **Görüntülenme** - {results[j]['views']}\n\n"
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
@@ -598,33 +596,23 @@ async def oynat(_, message: Message):
                     ],
                     [
                         InlineKeyboardButton("4️⃣", callback_data=f'plll 3|{query}|{user_id}'),
-                        InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}'),
+                        InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}')
                     ],
-                    [
-                        InlineKeyboardButton("6️⃣", callback_data=f'plll 5|{query}|{user_id}'),
-                    ],
-                    [InlineKeyboardButton(text="❎ Kapat", callback_data="cls")],
+                    [InlineKeyboardButton(text="❌ Kapat", callback_data="cls")],
                 ]
             )
-            await message.reply_photo(
-                photo=f"{THUMB_IMG}",
-                caption=toxxt,
-                reply_markup=keyboard
-            )
-
-            await lel.delete()
-            # veez project
+            await lel.edit(toxxt,reply_markup=keyboard,disable_web_page_preview=True)
+            # WHY PEOPLE ALWAYS LOVE PORN ?? (A point to think)
             return
-            # veez project
+            # KONTOOOOOLLLLLLLLLLL
         except:
-            await lel.edit("__Başlıyor...__")
-                        
+            await lel.edit("**❎ Emrorrr...**")
             # print(results)
             try:
                 url = f"https://youtube.com{results[0]['url_suffix']}"
-                title = results[0]["title"][:25]
+                title = results[0]["title"]
                 thumbnail = results[0]["thumbnails"][0]
-                thumb_name = f"thumb-{title}-veezmusic.jpg"
+                thumb_name = f"thumb-{title}-kenmusic.jpg"
                 thumb = requests.get(thumbnail, allow_redirects=True)
                 open(thumb_name, "wb").write(thumb.content)
                 duration = results[0]["duration"]
@@ -632,8 +620,8 @@ async def oynat(_, message: Message):
                 views = results[0]["views"]
             except Exception as e:
                 await lel.edit(
-                "**❌ Şarkı bulunamadı.** lütfen geçerli bir şarkı adı verin."
-            )
+                    "**❎ Şarkı bulunamadı**, Lütfen başlığı doğru yazın\n\n» **Örnek :** `/play Ebru Yaşar gibi`"
+                )
                 print(str(e))
                 return
             dlurl=url
