@@ -149,7 +149,7 @@ def updated_stats(chat, queue, vol=100):
     return stats
 
 def r_ply(type_):
-    if type_ == "play":
+    if type_ == "oynat":
         pass
     else:
         pass
@@ -585,7 +585,7 @@ async def oynat(_, message: Message):
             while j < 6:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ ⏰ **süresi** - {results[j]['duration']}\n"
-                toxxt += f" └ 👀 **Görüntülenme** - {results[j]['views']}\n\n" 
+                toxxt += f" └ 👀 __Destekçi Efsane Müzik A.I__\n\n" 
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
@@ -711,10 +711,10 @@ async def lol_cb(b, cb):
         useer_name = cb.message.from_user.first_name
     results = YoutubeSearch(query, max_results=6).to_dict()
     resultss=results[x]["url_suffix"]
-    title=results[x]["başlık"][:25]
+    title=results[x]["title][:25]
     thumbnail=results[x]["thumbnails"][0]
-    duration=results[x]["süre"]
-    views=results[x]["görüntülenmem"]
+    duration=results[x]["duration"]
+    views=results[x]["views"]
     url = f"https://www.youtube.com{resultss}"
     try:    
         secmul, dur, dur_arr = 1, 0, duration.split(":")
@@ -722,7 +722,7 @@ async def lol_cb(b, cb):
             dur += (int(dur_arr[i]) * secmul)
             secmul *= 60
         if (dur / 60) > DURATION_LIMIT:
-             await cb.message.edit(f"❌ Lagu dengan durasi lebih dari `{DURATION_LIMIT}` menit tidak dapat diputar.")
+             await cb.message.edit(f"❌ Süresi daha fazla olan şarkılar `{DURATION_LIMIT}` dakika çalınamaz.")
              return
     except:
         pass
