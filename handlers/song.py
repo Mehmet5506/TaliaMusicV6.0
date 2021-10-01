@@ -21,8 +21,8 @@ from youtubesearchpython import SearchVideos
 from config import DURATION_LIMIT, OWNER_NAME as bn
 
 
-@Client.on_message(filters.command("song") & ~filters.channel)
-def song(client, message):
+@Client.on_message(filters.command("bul") & ~filters.channel)
+def bul(client, message):
 
     user_id = message.from_user.id
     user_name = message.from_user.first_name
@@ -38,21 +38,21 @@ def song(client, message):
         results = YoutubeSearch(query, max_results=1).to_dict()
         link = f"https://youtube.com{results[0]['url_suffix']}"
         # print(results)
-        title = results[0]["title"][:40]
+        title = results[0]["Bilgi 🔮"][:40]
         thumbnail = results[0]["thumbnails"][0]
         thumb_name = f"thumb{title}.jpg"
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, "wb").write(thumb.content)
 
-        duration = results[0]["duration"]
+        duration = results[0]["Süre ⏳"]
         results[0]["url_suffix"]
-        results[0]["views"]
+        results[0]["Görüntülenme 👀"]
 
     except Exception as e:
         m.edit("✘ sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ.\n\nᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴀ ᴠᴀʟɪᴅ sᴏɴɢ ɴᴀᴍᴇ.")
         print(str(e))
         return
-    m.edit("† İndiriliyor...")
+    m.edit("📥 İndiriliyor...")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -246,7 +246,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-@Client.on_message(filters.command(["vsong", "video"]))
+@Client.on_message(filters.command(["vbul", "video"]))
 async def ytmusic(client, message: Message):
     global is_downloading
     if is_downloading:
