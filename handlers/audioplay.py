@@ -15,9 +15,9 @@ from helpers.errors import DurationLimitError
 from helpers.gets import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-@Client.on_message(command("oynat") & other_filters)
+@Client.on_message(command("ytoynat") & other_filters)
 @errors
-async def oynat(_, message: Message):
+async def ytoynat(_, message: Message):
 
     lel = await message.reply("☢ **İŞ𝙻𝙴𝙼𝙴 𝙰𝙻𝙸𝙽𝙳𝙸** 𝚂𝙴𝚂...")
     sender_id = message.from_user.id
