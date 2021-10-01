@@ -6,7 +6,7 @@ class Messages():
   INFO_MSG = [
     ".",
 f"""
-**󠁧󠁢󠁥󠁮󠁧󠁿✨ @Efsanestar_bot bilgi paneli✨ \n
+**󠁧󠁢󠁥󠁮󠁧󠁿✨ Müzik botu bilgi paneli✨ \n
 💭 Bildiğiniz gibi, siber müzik telegram sesli sohbet grubu özelliğinde müzik akışı için bir telegram müzik botu projesidir.\n
 💠 Talia müzik projesi 12 Nisan 2020'de kuruldu, şimdi olarak bilinen telegram sesli sohbetinde akış için bir müzik botu projesi oluşturduk. Talia müzik bot.\n
 🧪 Talia müzik versiyonu:
