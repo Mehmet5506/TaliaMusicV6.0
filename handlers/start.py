@@ -33,19 +33,19 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>✨ **Merhabalar {message.from_user.first_name}** \n
-💭 **[Talia Müzik](https://t.me/Sohbetdestek) Telegramın Sesli sohbetinde bana Müzik çalmam için izin veriniz**
+🎯 **[Talia Müzik](https://t.me/Sohbetdestek) Telegramın Sesli sohbetinde bana, Müzik çalmam için izin veriniz.**
 
-💡 **Üzerine tıklayarak komutları çalıştırın ve ögreniniz. » 📚 Komutlar dügmesi!**
+🔮 **Üzerine tıklayarak komutları çalıştırın ve ögreniniz. » 📚 Help!**
 
-❓ **Bu botun tüm özellikleri hakkında bilgi almak için, yardım basınız. /help**
+❓ **Bu botun tüm özellikleri hakkında bilgi almak için, basınız. /help**
 
-✂ **Sesli sohbette müzik çalmak için [Talia Resmi Kanal](hptts://t.me/Sohbetdestek) Tarafından yapılmıştır.**
+✂ **Sesli sohbette müzik çalmak için, [Talia Resmi Kanal](hptts://t.me/Sohbetdestek) Tarafından yapılmıştır.**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ 𝙱eni Grubuna Ekle➕", url=f"https://t.me/Efsanestar_bot?startgroup=true")
+                        "➕ Beni Grubuna Ekle➕", url=f"https://t.me/Efsanestar_bot?startgroup=true")
                 ],[
                     InlineKeyboardButton(
                          "🎶 Müzik kanalı", url="https://t.me/KanalEfsanestar"
@@ -54,13 +54,13 @@ async def start_(client: Client, message: Message):
                         "🏷️ Resmi Kanal", url=f"https://t.me/Sohbetdestek")
                 ],[
                     InlineKeyboardButton(
-                        "👥 Grubumuz", url=f"https://t.me/kurtadamoyunuu"
+                        "💬 Grubumuz", url=f"https://t.me/kurtadamoyunuu"
                     ),
                     InlineKeyboardButton(
-                        "📀 Mp3 Botu", url=f"https://t.me/Mp3_aramaBot")               
+                        "▶️ Mp3 Botu", url=f"https://t.me/Mp3_aramaBot")               
                  ],[
                     InlineKeyboardButton(
-                        "🧪 𝙺𝙰𝚈𝙽𝙰𝙺 𝙺𝙾𝙳𝚄 🧪", url="https://github.com/Mehmetbaba55"
+                        "📃 Kaynak Kodu 📃", url="https://github.com/Mehmetbaba55"
                     )
                 ]
             ]
