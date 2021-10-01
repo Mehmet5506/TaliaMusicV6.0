@@ -158,7 +158,7 @@ def r_ply(type_):
             [
                 InlineKeyboardButton("⏹", "son"),
                 InlineKeyboardButton("⏸", "durdur"),
-                InlineKeyboardButton("▶️", "devam),
+                InlineKeyboardButton("▶️", "devam"),
                 InlineKeyboardButton("⏭", "atla")
             ],
             [
