@@ -156,16 +156,16 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("⏹", "leave"),
-                InlineKeyboardButton("⏸", "puse"),
-                InlineKeyboardButton("▶️", "resume"),
-                InlineKeyboardButton("⏭", "skip")
+                InlineKeyboardButton("⏹", "son"),
+                InlineKeyboardButton("⏸", "durdur"),
+                InlineKeyboardButton("▶️", "devam),
+                InlineKeyboardButton("⏭", "atla")
             ],
             [
-                InlineKeyboardButton("📖 PlayList", "playlist"),
+                InlineKeyboardButton("📖 Butonlar", "playlist"),
             ],
             [       
-                InlineKeyboardButton("🗑 Kapat", "cls")
+                InlineKeyboardButton("❎ Kapat", "cls")
             ]        
         ]
     )
@@ -218,7 +218,7 @@ async def hfmm(_, message):
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
-        lel = await message.reply("`Processing...`")
+        lel = await message.reply("`İşleniyor...`")
         
         if message.chat.id in DISABLED_GROUPS:
             await lel.edit("**Müzik çalar zaten devre dışı.**")
@@ -266,7 +266,7 @@ async def p_cb(b, cb):
 
 
 @Client.on_callback_query(
-    filters.regex(pattern=r"^(play|pause|skip|leave|puse|resume|menu|cls)$")
+    filters.regex(pattern=r"^(oynat|durdur|atla|ayril|puse|devam|menü|cls)$")
 )
 @cb_admin_check
 async def m_cb(b, cb):
@@ -290,14 +290,14 @@ async def m_cb(b, cb):
                 ) or (
                     callsmusic.pytgcalls.active_calls[chet_id] == "paused"
                 ):
-            await cb.answer("Assistant is not connected to voice chat!", show_alert=True)
+            await cb.answer("Asistan sesli sohbete bağlı değil!", show_alert=True)
         else:
             callsmusic.pytgcalls.pause_stream(chet_id)
             
             await cb.answer("Müzik duraklatıldı!")
             await cb.message.edit(updated_stats(m_chat, qeue), reply_markup=r_ply("play"))
                 
-    elif type_ == "play":       
+    elif type_ == "oynat":       
         if (
             chet_id not in callsmusic.pytgcalls.active_calls
             ) or (
@@ -332,24 +332,24 @@ async def m_cb(b, cb):
                  msg += f"\n• İstek üzerine {usr}\n"
         await cb.message.edit(msg)      
                       
-    elif type_ == "resume":     
+    elif type_ == "devam":     
         if (
             chet_id not in callsmusic.pytgcalls.active_calls
             ) or (
                 callsmusic.pytgcalls.active_calls[chet_id] == "playing"
             ):
-                await cb.answer("Voice chat is not connected or already playing", show_alert=True)
+                await cb.answer("Sesli sohbet bağlı değil veya zaten oynatılıyor", show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chet_id)
             await cb.answer("Müzik devam etti!")
      
-    elif type_ == "puse":         
+    elif type_ == "durdur":         
         if (
             chet_id not in callsmusic.pytgcalls.active_calls
                 ) or (
                     callsmusic.pytgcalls.active_calls[chet_id] == "paused"
                 ):
-            await cb.answer("Voice chat is not connected or already paused", show_alert=True)
+            await cb.answer("Sesli sohbet bağlı değil veya zaten duraklatıldı", show_alert=True)
         else:
             callsmusic.pytgcalls.pause_stream(chet_id)
             
@@ -359,30 +359,30 @@ async def m_cb(b, cb):
         await cb.answer("Menü kapalı")
         await cb.message.delete()       
 
-    elif type_ == "menu":  
+    elif type_ == "menü":  
         stats = updated_stats(cb.message.chat, qeue)  
-        await cb.answer("Açılan menü")
+        await cb.answer("Menü ve Butonlar")
         marr = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏹", "leave"),
-                    InlineKeyboardButton("⏸", "puse"),
-                    InlineKeyboardButton("▶️", "resume"),
-                    InlineKeyboardButton("⏭", "skip")
+                    InlineKeyboardButton("⏹", "son"),
+                    InlineKeyboardButton("⏸", "durdur"),
+                    InlineKeyboardButton("▶️", "devam"),
+                    InlineKeyboardButton("⏭", "atla")
                 
                 ],
                 [
-                    InlineKeyboardButton("📖 PlayList", "playlist"),
+                    InlineKeyboardButton("📖 Butonlar", "playlist"),
                 
                 ],
                 [       
-                    InlineKeyboardButton("🗑 Kapat", "cls")
+                    InlineKeyboardButton("❎ Kapat", "cls")
                 ]        
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
 
-    elif type_ == "skip":        
+    elif type_ == "atla":        
         if qeue:
             qeue.pop(0)
         if chet_id not in callsmusic.pytgcalls.active_calls:
@@ -404,7 +404,7 @@ async def m_cb(b, cb):
                     f"⫸ Atlanan parça\n⫸ Şimdi oynatıyor: **{qeue[0][0]}**"
                 )
 
-    elif type_ == "leave":
+    elif type_ == "son":
         if chet_id in callsmusic.pytgcalls.active_calls:
             try:
                 callsmusic.queues.clear(chet_id)
@@ -417,8 +417,8 @@ async def m_cb(b, cb):
             await cb.answer("Asistan sesli sohbete bağlı değil!", show_alert=True)
 
 
-@Client.on_message(command("play") & other_filters)
-async def play(_, message: Message):
+@Client.on_message(command("oynat") & other_filters)
+async def oymat(_, message: Message):
     global que
     global useer
     if message.chat.id in DISABLED_GROUPS:
@@ -464,14 +464,14 @@ async def play(_, message: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>⛑ Flood Wait Error ⛑\n{user.first_name} userbot için katılma isteği nedeniyle grubunuza katılamıyor! Kullanıcıların gruplar halinde yasaklanmamasını sağlama."
-                        f"\n\nVeya ekleyin @mymusicasistan el ile Grubunuza bakın ve yeniden deneyin</b>",
+                        f"\n\nVeya ekleyin @SesMusicAsistan el ile Grubunuza bakın ve yeniden deneyin</b>",
                     )
     try:
         await USER.get_chat(chid)
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>{user.first_name} bu grupta yasaklandı, yöneticiden @TaliaMusicasistant Elle ekleyin.</i>"
+            f"<i>{user.first_name} bu grupta yasaklandı, yöneticiden @sesmusicasistan Elle ekleyin.</i>"
         )
         return
     text_links=None
@@ -508,10 +508,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 𝙼𝙴𝙽ü", callback_data="menu"),
-                    InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
+                    InlineKeyboardButton("📖 Butonları", callback_data="menü"),
+                    InlineKeyboardButton("❎ Kapat", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/kurtadamoyunuu")
+                    InlineKeyboardButton("📣 Kanal", url=f"https://t.me/kurtadamoyunuu")
                 ],
             ]
         )
@@ -530,23 +530,23 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🔎 **Şarkı bulma...**")
+        await lel.edit("🔎 **Sesler işleniyor...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
             # print(results)
-            title = results[0]["title"][:25]
+            title = results[0]["başlık"][:25]
             thumbnail = results[0]["thumbnails"][0]
             thumb_name = f"thumb-{title}-cybermusic.jpg"
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, "wb").write(thumb.content)
-            duration = results[0]["duration"]
+            duration = results[0]["süre"]
             results[0]["url_suffix"]
-            views = results[0]["views"]
+            views = results[0]["görüntülenme"]
         except Exception as e:
             await lel.edit(
-                "**❌ Song not found.** please give a valid song name."
+                "**❌ Şarkı bulunamadı.** lütfen geçerli bir şarkı adı verin."
             )
             print(str(e))
             return
@@ -555,10 +555,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 𝙼𝙴𝙽ü", callback_data="menu"),
-                    InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
+                    InlineKeyboardButton("📖 Menü", callback_data="menü"),
+                    InlineKeyboardButton("❎ Kapat", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/(kurtadamoyunuu")
+                    InlineKeyboardButton("📣 Kanal", url=f"https://t.me/(kurtadamoyunuu")
                 ],
             ]
         )
@@ -578,13 +578,13 @@ async def play(_, message: Message):
           await lel.edit("**Lütfen bana çalmak istediğin şarkının adını ver.!**")
         # veez project
         try:
-            toxxt = "⚡ __Çalınacak şarkıyı seçme:__\n\n"
+            toxxt = "⚡ __Çalınacak şarkıyı seç:__\n\n"
             j = 0
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣"]
             while j < 6:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
+                toxxt += f" ├ 💡 **süresi** - {results[j]['duration']}\n"
                 toxxt += f" └ ⚡ Talia Müzik Tarafından.I\n\n"
                 j += 1            
             keyboard = InlineKeyboardMarkup(
@@ -601,7 +601,7 @@ async def play(_, message: Message):
                     [
                         InlineKeyboardButton("6️⃣", callback_data=f'plll 5|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="🗑 Kapat", callback_data="cls")],
+                    [InlineKeyboardButton(text="❎ Kapat", callback_data="cls")],
                 ]
             )
             await message.reply_photo(
@@ -615,22 +615,22 @@ async def play(_, message: Message):
             return
             # veez project
         except:
-            await lel.edit("__Başlatıyorum, Lütfen bekleyiniz...__")
+            await lel.edit("__Başlıyor...__")
                         
             # print(results)
             try:
                 url = f"https://youtube.com{results[0]['url_suffix']}"
-                title = results[0]["title"][:25]
+                title = results[0]["başlık"][:25]
                 thumbnail = results[0]["thumbnails"][0]
                 thumb_name = f"thumb-{title}-veezmusic.jpg"
                 thumb = requests.get(thumbnail, allow_redirects=True)
                 open(thumb_name, "wb").write(thumb.content)
-                duration = results[0]["duration"]
+                duration = results[0]["süre"]
                 results[0]["url_suffix"]
-                views = results[0]["views"]
+                views = results[0]["görüntülenme"]
             except Exception as e:
                 await lel.edit(
-                "**❌ Song not found.** lütfen geçerli bir şarkı adı verin."
+                "**❌ Şarkı bulunamadı.** lütfen geçerli bir şarkı adı verin."
             )
                 print(str(e))
                 return
@@ -639,10 +639,10 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 𝙼𝙴𝙽ü", callback_data="menu"),
-                    InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
+                    InlineKeyboardButton("📖 Butonlar", callback_data="menü"),
+                    InlineKeyboardButton("❎ Kapat", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/sohbetdestek")
+                    InlineKeyboardButton("📣 Kanal", url=f"https://t.me/sohbetdestek")
                 ],
             ]
             )
@@ -680,7 +680,7 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption=f"🏷 **İsmi:** [{title[:35]}]({url})\n⏱ **Süre:** `{duration}`\n💡 **Status:** `Playing`\n" \
+            caption=f"🏷 **İsmi:** [{title[:35]}]({url})\n⏱ **Süre:** `{duration}`\n💡 **Durum:** `Playing`\n" \
                    +f"🎧 **Konumda:** {message.from_user.mention}",
             reply_markup=keyboard
         )
@@ -701,7 +701,7 @@ async def lol_cb(b, cb):
         return
     useer_id = int(useer_id)
     if cb.from_user.id != useer_id:
-        await cb.answer("You are not people who requested this song!", show_alert=True)
+        await cb.answer("Siz bu şarkıyı isteyen insanlar değilsiniz.!", show_alert=True)
         return
     #await cb.message.edit("🔁 **Hazırlanıyor...**")
     x=int(x)
@@ -711,10 +711,10 @@ async def lol_cb(b, cb):
         useer_name = cb.message.from_user.first_name
     results = YoutubeSearch(query, max_results=6).to_dict()
     resultss=results[x]["url_suffix"]
-    title=results[x]["title"][:25]
+    title=results[x]["başlık"][:25]
     thumbnail=results[x]["thumbnails"][0]
-    duration=results[x]["duration"]
-    views=results[x]["views"]
+    duration=results[x]["süre"]
+    views=results[x]["görüntülenmem"]
     url = f"https://www.youtube.com{resultss}"
     try:    
         secmul, dur, dur_arr = 1, 0, duration.split(":")
@@ -738,10 +738,10 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 𝙼𝙴𝙽ü", callback_data="menu"),
-                    InlineKeyboardButton("🗑 𝙺𝙰𝙿𝙰𝚃", callback_data="cls"),
+                    InlineKeyboardButton("📖 Butonlar", callback_data="menü"),
+                    InlineKeyboardButton("🗑 Kapat", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/kurtadamoyunuu")
+                    InlineKeyboardButton("📣 Kanal", url=f"https://t.me/kurtadamoyunuu")
                 ],
             ]
     )
