@@ -187,7 +187,7 @@ async def settings(client, message):
         else:
             await message.reply(stats, reply_markup=r_ply("play"))
     else:
-        await message.reply("**Please turn on the voice chat first.**")
+        await message.reply("**Lütfen önce sesli sohbeti açın.**")
 
 
 @Client.on_message(
@@ -536,14 +536,14 @@ async def oynat(_, message: Message):
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
             # print(results)
-            title = results[0]["başlık"][:25]
+            title = results[0]["title"][:25]
             thumbnail = results[0]["thumbnails"][0]
             thumb_name = f"thumb-{title}-cybermusic.jpg"
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, "wb").write(thumb.content)
-            duration = results[0]["süre"]
+            duration = results[0]["duration"]
             results[0]["url_suffix"]
-            views = results[0]["görüntülenme"]
+            views = results[0]["views"]
         except Exception as e:
             await lel.edit(
                 "**❌ Şarkı bulunamadı.** lütfen geçerli bir şarkı adı verin."
@@ -620,14 +620,14 @@ async def oynat(_, message: Message):
             # print(results)
             try:
                 url = f"https://youtube.com{results[0]['url_suffix']}"
-                title = results[0]["başlık"][:25]
+                title = results[0]["title"][:25]
                 thumbnail = results[0]["thumbnails"][0]
                 thumb_name = f"thumb-{title}-veezmusic.jpg"
                 thumb = requests.get(thumbnail, allow_redirects=True)
                 open(thumb_name, "wb").write(thumb.content)
-                duration = results[0]["süre"]
+                duration = results[0]["duration"]
                 results[0]["url_suffix"]
-                views = results[0]["görüntülenme"]
+                views = results[0]["views"]
             except Exception as e:
                 await lel.edit(
                 "**❌ Şarkı bulunamadı.** lütfen geçerli bir şarkı adı verin."
