@@ -116,7 +116,7 @@ async def help_(client: Client, message: Message):
 3. müzik çalmaya başlamadan önce sesli sohbeti açtığınızdan emin olun.
 \n💁🏻‍♀️ **tüm kullanıcı için komutlar:**
 \n/oynat (song name) - youtube'dan şarkı çalmak
-/ytoynat+ (reply to audio) - ses dosyasını kullanarak şarkı çalma youtube linki veya Mp3 oynatıcı
+/ytoynat - (reply to audio) - ses dosyasını kullanarak şarkı çalma youtube linki veya Mp3 oynatıcı
 /playlist - listedeki şarkıyı sırada gösterme
 /bul (song name) - youtube'dan şarkı indirme
 /arama (video name) - youtube'dan video arama detayı
@@ -132,8 +132,8 @@ async def help_(client: Client, message: Message):
 /asistan - grubunuza asistan katılmayı davet etme 
 /reload - yönetici listesini yenilemek için 
 /cache - temizlenmiş yönetici önbelleği için 
-/auth - müzik botu kullanmak için yetkili kullanıcı 
-/deauth - müzik botu kullanmak için yetkisiz 
+/yetki - müzik botu kullanmak için yetkili kullanıcı 
+/yetkial - müzik botu kullanmak için yetkisiz 
 /musicplayer (on / off) - devre dışı bırakmak / etkinleştirmek grubunuzdaki müzik çalar için
 \n🎧 kanal akışı komutları:
 \n/cplay - kanal sesli sohbetinde müzik akışı 
@@ -146,12 +146,6 @@ async def help_(client: Client, message: Message):
 \n🧙‍♂️ sudo kullanıcıları için komut:
 \n/userbotleaveall - asistanın tüm gruptan ayrılmasını emretmek 
 /gcast - yayın iletisi gönderme yardımcıya göre 
-\n🎊 **eğlence için komutlar:**
-\n/chika - kendiniz kontrol edin 
-/wibu - kendiniz kontrol edin 
-/asupan - kendiniz kontrol edin
-/truth - kendiniz kontrol edin
-/dare - kendiniz kontrol edin
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
