@@ -583,9 +583,11 @@ async def oynat(_, message: Message):
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣"]
             while j < 6:
-                toxxt += f"{emojilist[j]} [{results[j]['title'][:20]}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ ⏰ **süresi** - {results[j]['duration']}\n"
-                toxxt += f" └ 👀 __Destekçi Efsane Müzik A.I__\n\n" 
+                toxxt += f"{emojilist[j]} <b>Title - [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})</b>\n"
+                toxxt += f" ╚ <b>Süresi</b> - {results[j]['duration']}\n"
+                toxxt += f" ╚ <b>Görüntülenme</b> - {results[j]['views']}\n"
+                toxxt += f" ╚ <b>Kanak</b> - {results[j]['channel']}\n\n"
+
                 j += 1            
             keyboard = InlineKeyboardMarkup(
                 [
