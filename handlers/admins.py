@@ -25,10 +25,10 @@ async def update_admin(client, message):
     await message.reply_text("✔ 𝙱𝙾𝚃 ** 𝙳𝙾𝙶𝚁𝚄 𝚈Ü𝙺𝙻𝙴𝙽𝙳İ ! **\n✔ **𝚈Ö𝙽𝙴𝚃İ𝙲İ 𝙻İ𝚂𝚃𝙴𝚂İ** 𝙳𝙾Ğ𝚁𝚄 **Güncellenmiş!**")
 
 
-@Client.on_message(command("pause") & other_filters)
+@Client.on_message(command("durdur") & other_filters)
 @errors
 @authorized_users_only
-async def pause(_, message: Message):
+async def durdur(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "paused"
@@ -36,24 +36,24 @@ async def pause(_, message: Message):
         await message.reply_text("✘ 𝙰𝙺𝙸Ş𝚃𝙰 𝙷İÇ𝙱İ𝚁 Ş𝙴𝚈 𝚈𝙾𝙺!")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("✔ 𝙼Ü𝚉İ𝙺 𝙳𝚄𝚁𝙰𝙺𝙻𝙰𝚃𝙸𝙻𝙳𝙸!")
+        await message.reply_text("✔ Müzik duraklatıldı!")
 
 
-@Client.on_message(command("resume") & other_filters)
+@Client.on_message(command("devam") & other_filters)
 @errors
 @authorized_users_only
-async def resume(_, message: Message):
+async def devam(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("✘ 𝙷İÇ𝙱İ𝚁 Ş𝙴𝚈 𝙳𝚄𝚁𝙳𝚄𝚁𝚄𝙻𝙼𝙰𝚉!")
+        await message.reply_text("✘ Akış durdurulması..!")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("✔ 𝙼Ü𝚉İ𝙺 𝙳𝙴𝚅𝙰𝙼 𝙴𝚃𝚃İ!")
+        await message.reply_text("✔ Müzik Devam Etti!")
 
 
-@Client.on_message(command("end") & other_filters)
+@Client.on_message(command("son") & other_filters)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
@@ -67,13 +67,13 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("✔ 𝚈𝙰𝚈𝙸𝙽 𝚂𝙾𝙽𝙰 𝙴𝚁𝙳İ!")
+        await message.reply_text("✔ Yayın Akışı Kapatıldı!")
 
 
-@Client.on_message(command("skip") & other_filters)
+@Client.on_message(command("atla") & other_filters)
 @errors
 @authorized_users_only
-async def skip(_, message: Message):
+async def atla(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
@@ -93,15 +93,15 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f"✘ 𝙰𝚃𝙻𝙰𝚃𝙸𝙻𝙼𝙸Ş : **{skip[0]}**\n✔ Şİ𝙼𝙳İ 𝙾𝚈𝙽𝚄𝚈𝙾𝚁 : **{qeue[0][0]}**")
+    await message.reply_text(f"✘ Atlatıldı: **{skip[0]}**\n✔ şimdi Oynatılıyor: **{qeue[0][0]}**")
 
 
-@Client.on_message(filters.command("auth"))
+@Client.on_message(filters.command("yetki"))
 @authorized_users_only
 async def authenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("✘ 𝙺𝚄𝙻𝙻𝙰𝙽𝙸𝙲𝙸𝚈𝙸 𝚈𝙴𝚃𝙺İ𝙻𝙴𝙽𝙳İ𝚁𝙼𝙴𝙺 İÇİ𝙽 𝙼𝙴𝚂𝙰𝙹𝙰 𝙲𝙴𝚅𝙰𝙿 𝚅𝙴𝚁İ𝙽!")
+        await message.reply("Kullanıcıya Yetkş Vermek için yanıtlayınız!")
         return
     if message.reply_to_message.from_user.id not in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
@@ -109,15 +109,15 @@ async def authenticate(client, message):
         admins[message.chat.id] = new_admins
         await message.reply("user authorized.")
     else:
-        await message.reply("✔ 𝙺𝚄𝙻𝙻𝙰𝙽𝙸𝙲𝙸 𝚉𝙰𝚃𝙴𝙽 𝚈𝙴𝚃𝙺İ𝙻İ!")
+        await message.reply("✔ Kullanıcı Zaten Yetkili!")
 
 
-@Client.on_message(filters.command("deauth"))
+@Client.on_message(filters.command("yetkial"))
 @authorized_users_only
 async def deautenticate(client, message):
     global admins
     if not message.reply_to_message:
-        await message.reply("✘ 𝙺𝚄𝙻𝙻𝙰𝙽𝙸𝙲𝙸𝚈𝙸 𝚈𝙴𝚃𝙺İ𝚂İ𝚉𝙻𝙴Ş𝚃İ𝚁𝙼𝙴𝙺 İÇİ𝙽 𝙼𝙴𝚂𝙰𝙹 𝙰𝚃𝙸𝙽!")
+        await message.reply("✘ Kullanıcıyı yetkisizleştirmek için mesaj atınız!")
         return
     if message.reply_to_message.from_user.id in admins[message.chat.id]:
         new_admins = admins[message.chat.id]
@@ -125,4 +125,4 @@ async def deautenticate(client, message):
         admins[message.chat.id] = new_admins
         await message.reply("user deauthorized")
     else:
-        await message.reply("✔ KULLANICI ZATEN YETKİLENDİRİLDİ!")
+        await message.reply("✔ Kullanıcının yetkisi alındı!")
