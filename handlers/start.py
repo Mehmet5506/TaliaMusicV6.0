@@ -45,22 +45,22 @@ async def start_(client: Client, message: Message):
             [ 
                 [
                     InlineKeyboardButton(
-                        "➕ 𝙱𝙴𝙽İ 𝙶𝚁𝚄𝙱𝚄𝙽𝙰 𝙴𝙺𝙻𝙴 ➕", url=f"https://t.me/Efsanestar_bot?startgroup=true")
+                        "➕ 𝙱eni Grubuna Ekle➕", url=f"https://t.me/Efsanestar_bot?startgroup=true")
                 ],[
                     InlineKeyboardButton(
-                         "📚 𝙺𝙾𝙼𝚄𝚃𝙻𝙰𝚁", url="https://t.me/KanalEfsanestar"
+                         "🎶 Müzik kanalı", url="https://t.me/KanalEfsanestar"
                     ),
                     InlineKeyboardButton(
-                        "🖥️ 𝙳Ü𝚉𝙴𝙽𝙻𝙴𝙼𝙴 𝚈𝙰𝙿𝙰𝙽", url=f"https://t.me/Furkanbeyy")
+                        "🏷️ Resmi Kanal", url=f"https://t.me/Sohbetdestek")
                 ],[
                     InlineKeyboardButton(
-                        "👥 𝚁𝙴𝚂𝙼İ 𝙶𝚁𝚄𝙿", url=f"https://t.me/Taliasohbet"
+                        "👥 Grubumuz", url=f"https://t.me/kurtadamoyunuu"
                     ),
                     InlineKeyboardButton(
-                        "📣 𝚁𝙴𝚂𝙼İ 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/SohbetDestek")               
+                        "📀 Mp3 Botu", url=f"https://t.me/Mp3_aramaBot")               
                  ],[
                     InlineKeyboardButton(
-                        "🧪 𝙺𝙰𝚈𝙽𝙰𝙺 𝙺𝙾𝙳𝚄 🧪", url="https://t.me/Mahoaga"
+                        "🧪 𝙺𝙰𝚈𝙽𝙰𝙺 𝙺𝙾𝙳𝚄 🧪", url="https://github.com/Mehmetbaba55"
                     )
                 ]
             ]
