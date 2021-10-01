@@ -112,24 +112,24 @@ async def help_(client: Client, message: Message):
 \n📙 𝙱𝙴𝙽İ 𝙽𝙰𝚂𝙸𝙻 𝙺𝚄𝙻𝙻𝙰𝙽𝙸𝚁𝚂𝙸𝙽?
 \n1. önce beni grubunuza ekleyin.
 2. beni yönetici olarak tanıtın ve tüm izinleri verin.
-3. ardından, @taliaMusicasistant grubunuza veya türünüze /userbotjoin.
+3. ardından, @Sesmusicasistan grubunuza veya türünüze /asistan.
 3. müzik çalmaya başlamadan önce sesli sohbeti açtığınızdan emin olun.
 \n💁🏻‍♀️ **tüm kullanıcı için komutlar:**
-\n/play (song name) - youtube'dan şarkı çalmak
-/oynat (reply to audio) - ses dosyasını kullanarak şarkı çalma youtube linki veya Mp3 oynatıcı
+\n/oynat (song name) - youtube'dan şarkı çalmak
+/ytoynat+ (reply to audio) - ses dosyasını kullanarak şarkı çalma youtube linki veya Mp3 oynatıcı
 /playlist - listedeki şarkıyı sırada gösterme
-/song (song name) - youtube'dan şarkı indirme
-/search (video name) - youtube'dan video arama detayı
+/bul (song name) - youtube'dan şarkı indirme
+/arama (video name) - youtube'dan video arama detayı
 /vsong (video name) - youtube'dan video indirme ayrıntılı
 /lyric - (song name) şarkı sözleri scrapper 
 /vk (song name) - şarkıyı satır içi moddan indirme
 \n👷🏻‍♂️ **yöneticiler için komutlar:**
 \n/player - müzik çalar ayarları panelini açma
-/pause - müzik akışını duraklatma
-/resume - devam et müzik duraklatıldı 
-/skip - sonraki şarkıya atlamak 
-/end - müzik akışını durdurma 
-/userbotjoin - grubunuza asistan katılmayı davet etme 
+/durdur - müzik akışını duraklatma
+/devam - devam et müzik duraklatıldı 
+/atla - sonraki şarkıya atlamak 
+/son - müzik akışını durdurma 
+/asistan - grubunuza asistan katılmayı davet etme 
 /reload - yönetici listesini yenilemek için 
 /cache - temizlenmiş yönetici önbelleği için 
 /auth - müzik botu kullanmak için yetkili kullanıcı 
@@ -157,15 +157,15 @@ async def help_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "☣ 𝙶𝚁𝚄𝙿", url=f"https://t.me/Sohbetneresi"
+                        "☣ Grub", url=f"https://t.me/kurtadamoyunuu"
                     ),
                     InlineKeyboardButton(
-                        "📣 𝙺𝙰𝙽𝙰𝙻", url=f"https://t.me/SohbetDestek"
+                        "📣 Kanal", url=f"https://t.me/SohbetDestek"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "♞🏻‍💻 𝙶𝙴𝙻İŞ𝚃İ𝚁İ𝙲İ", url=f"https://t.me/Mahoaga"
+                        "♞🏻‍ Developer 🇹🇷", url=f"https://t.me/Mahoaga"
                     )
                 ]
             ]
@@ -173,7 +173,7 @@ async def help_(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["ping", f"ping@Efsanestar_bot"]) & ~filters.edited)
+@Client.on_message(command(["ping", f"ping@mp3dinleme_Bot"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("ᴘɪɴɢɪɴɢ...")
@@ -184,7 +184,7 @@ async def ping_pong(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["uptime", f"uptime@Efsanestar_bot"]) & ~filters.edited)
+@Client.on_message(command(["uptime", f"uptime@Mp3dinleme_Bot"]) & ~filters.edited)
 @authorized_users_only
 async def get_uptime(client: Client, message: Message):
     current_time = datetime.utcnow()
