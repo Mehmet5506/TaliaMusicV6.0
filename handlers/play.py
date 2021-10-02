@@ -252,7 +252,7 @@ async def p_cb(b, cb):
         by = temp[0][1].mention(style="md")
         msg = "**Şimdi yürütülen** in {}".format(cb.message.chat.title)
         msg += "\n• " + now_playing
-        msg += "\n• Komut ile " + by
+        msg += "\n• Tarafından " + by
         temp.pop(0)
         if temp:
             msg += "\n\n"
@@ -376,7 +376,7 @@ async def m_cb(b, cb):
                 
                 ],
                 [       
-                    InlineKeyboardButton("❎ Kapat", "cls")
+                    InlineKeyboardButton("❌ Kapat", "cls")
                 ]        
             ]
         )
@@ -509,7 +509,7 @@ async def oynat(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Butonlar", callback_data="menü"),
-                    InlineKeyboardButton("❎ Kapat", callback_data="cls"),
+                    InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 Kanal", url=f"https://t.me/kurtadamoyunuu")
                 ],
@@ -556,7 +556,7 @@ async def oynat(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Butonlar", callback_data="menü"),
-                    InlineKeyboardButton("❎ Kapat", callback_data="cls"),
+                    InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 Kanal", url=f"https://t.me/(kurtadamoyunuu")
                 ],
@@ -630,7 +630,7 @@ async def oynat(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📖 Butonlar", callback_data="menü"),
-                    InlineKeyboardButton("❎ Kapat", callback_data="cls"),
+                    InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 Kanal", url=f"https://t.me/sohbetdestek")
                 ],
@@ -729,7 +729,7 @@ async def lol_cb(b, cb):
             [
                 [
                     InlineKeyboardButton("📖 Butonlar", callback_data="menü"),
-                    InlineKeyboardButton("🗑 Kapat", callback_data="cls"),
+                    InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 Kanal", url=f"https://t.me/kurtadamoyunuu")
                 ],
