@@ -529,8 +529,8 @@ async def oynat(_, message: Message):
             else file_name
         )
     elif urls:
-        query = toxt
-        await lel.edit("🔎 **Sesler işleniyor...**")
+       query = toxt
+        await lel.edit("🎵 **Şarkı devam ediyor...**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -538,15 +538,16 @@ async def oynat(_, message: Message):
             # print(results)
             title = results[0]["title"][:25]
             thumbnail = results[0]["thumbnails"][0]
-            thumb_name = f"thumb-{title}-cybermusic.jpg"
+            thumb_name = f"thumb{title}.jpg"
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, "wb").write(thumb.content)
             duration = results[0]["duration"]
             results[0]["url_suffix"]
             views = results[0]["views"]
+
         except Exception as e:
             await lel.edit(
-                "**❌ Şarkı bulunamadı.** lütfen geçerli bir şarkı adı verin."
+                "**Şarkı bulunamadı.** Daha net bir başlık parçası aramayı deneyin, Yaz `/help` Yardıma ihtiyacın olursa."
             )
             print(str(e))
             return
@@ -555,87 +556,86 @@ async def oynat(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Butonlar", callback_data="menü"),
-                    InlineKeyboardButton("❌ Kapat", callback_data="cls"),
+                    InlineKeyboardButton("⏺ Menu", callback_data="menu"),
+                    InlineKeyboardButton("🗑 Kapat", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 Kanal", url=f"https://t.me/(kurtadamoyunuu")
+                    InlineKeyboardButton("📣 Official Channel", url=f"https://t.me/Sohbetdestek")
                 ],
             ]
         )
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)
-        file_path = await converter.convert(youtube.download(url))        
+        file_path = await convert(youtube.download(url))        
     else:
         query = ""
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
+        await lel.edit("🎵 **Şarkı İşleme alınıyor..**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
-          results = YoutubeSearch(query, max_results=6).to_dict()
+          results = YoutubeSearch(query, max_results=7).to_dict()
         except:
-          await lel.edit("**lütfen çalmak istediğiniz şarkı adını verin !**")
-        # veez project
+          await lel.edit("**Bana çalmak istediğin şarkının adını ver. !**")
+        # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "⚡ __Seçiminizi basarak yapınız:__\n\n"
+            toxxt = "**__Lütfen çalmak istediğiniz şarkıyı seçin__⚡**\n\n"
             j = 0
             useer=user_name
-            emojilist = ["1","2","3","4","5","6"]
-            while j < 6:
-                toxxt += f"{emojilist[j]} [{results[j]['title'][:30]}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ 💡 **Süre ⏰** - {results[j]['duration']}\n"
-                toxxt += f" └ ⚡ __ Talia Müzik Aracılığıyla__\n\n"
+
+            emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣"]
+            while j < 7:
+                toxxt += f"{emojilist[j]} [{results[j]['title'][:25]}](https://youtube.com{results[j]['url_suffix']})\n"
+                toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
+                toxxt += f" └ ⚡ __Powered by EX MUSIC__\n\n"
+
                 j += 1            
-            keyboard = InlineKeyboardMarkup(
+            koyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("1", callback_data=f'plll 0|{query}|{user_id}'),
-                        InlineKeyboardButton("2", callback_data=f'plll 1|{query}|{user_id}'),
-                        InlineKeyboardButton("3", callback_data=f'plll 2|{query}|{user_id}'),
+                        InlineKeyboardButton("1️⃣", callback_data=f'plll 0|{query}|{user_id}'),
+                        InlineKeyboardButton("2️⃣", callback_data=f'plll 1|{query}|{user_id}'),
+                        InlineKeyboardButton("3️⃣", callback_data=f'plll 2|{query}|{user_id}'),
                     ],
                     [
-                        InlineKeyboardButton("4", callback_data=f'plll 3|{query}|{user_id}'),
-                        InlineKeyboardButton("5", callback_data=f'plll 4|{query}|{user_id}'),
+                        InlineKeyboardButton("4️⃣", callback_data=f'plll 3|{query}|{user_id}'),
+                        InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}'),    
                     ],
                     [
-                        InlineKeyboardButton("6", callback_data=f'plll 5|{query}|{user_id}'),
+                        InlineKeyboardButton("6️⃣", callback_data=f'plll 5|{query}|{user_id}'),
+                        InlineKeyboardButton("7️⃣", callback_data=f'plll 6|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="❌ Kapat", callback_data="cls")],
+                    [InlineKeyboardButton(text="🗑 Kapat", callback_data="cls")],
                 ]
-            )
-            await message.reply_photo(
-                photo=f"{THUMB_IMG}",
-                caption=toxxt,
-                reply_markup=keyboard
-            )
-
-            await lel.delete()
-            # veez project
+            )     
+            await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
+            # WHY PEOPLE ALWAYS LOVE PORN ?? (A point to think)
             return
-            # veez project
+            # Returning to pornhub
         except:
-            await lel.edit("__no more results to choose, starting to playing...__")
+            await lel.edit("**Aralarından seçim yapabileceğiniz yeterli sonuç yok...Otomatik başlatıyorum..**")
                         
             # print(results)
             try:
                 url = f"https://youtube.com{results[0]['url_suffix']}"
                 title = results[0]["title"][:25]
                 thumbnail = results[0]["thumbnails"][0]
-                thumb_name = f"thumb-{title}-veezmusic.jpg"
+                thumb_name = f"thumb{title}.jpg"
                 thumb = requests.get(thumbnail, allow_redirects=True)
                 open(thumb_name, "wb").write(thumb.content)
                 duration = results[0]["duration"]
                 results[0]["url_suffix"]
                 views = results[0]["views"]
+
             except Exception as e:
                 await lel.edit(
-                "**❌ song not found.** lütfen geçerli bir şarkı adı verin."
+                "**Şarkı bulunamadı.** Daha net bir başlık parçası aramayı deneyin, Yaz `/help` Yardıma ihtiyacın olursa."
             )
                 print(str(e))
                 return
             dlurl=url
-            dlurl=dlurl.replace("youtube","youtubepp")
+            dlurl=dlurl.replace("youtube","youtubepp") 
             keyboard = InlineKeyboardMarkup(
             [
                 [
