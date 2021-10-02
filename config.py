@@ -22,7 +22,7 @@ ASSISTANT_NAME = getenv("ASSISTANT_NAME", "SesMusicAsistan")
 GROUP_SUPPORT = getenv("GROUP_SUPPORT", "Sohbetdestek")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "EfsaneMusicProject")
 OWNER_NAME = getenv("OWNER_NAME", "Mahoaga") # kullanıcı adınızı semboller olmadan doldurma @
-DEV_NAME = getenv("DEV_NAME", "Badboyanim")
+DEV_NAME = getenv("DEV_NAME", "mahoaga")
 PMPERMIT = getenv("PMPERMIT", None)
 
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "250"))
