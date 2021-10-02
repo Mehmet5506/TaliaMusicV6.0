@@ -520,7 +520,7 @@ async def oynat(_, message: Message):
         thumb_name = "https://telegra.ph/file/fa2cdb8a14a26950da711.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
-        views = "Locally added"
+        views = "Yerel olarak eklendi"
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)
         file_path = await converter.convert(
@@ -670,7 +670,7 @@ async def oynat(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption=f"🏷 **İsmi:** [{title[:35]}]({url})\n⏱ **Süre:** `{duration}`\n💡 **Durum:** `Playing`\n" \
+            caption=f"🏷 **İsmi:** [{title[:35]}]({url})\n⏱ **Süre:** `{duration}`\n💡 **Durum:** `Oynatılıyor`\n" \
                    +f"🎧 **Konumda:** {message.from_user.mention}",
             reply_markup=keyboard
         )
