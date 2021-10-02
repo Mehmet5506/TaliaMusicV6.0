@@ -511,10 +511,10 @@ async def oynat(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏺ Menu", callback_data="menü"),
-                    InlineKeyboardButton("🗑 Kapat", callback_data="cls"),
+                    InlineKeyboardButton("♒ Butonlar", callback_data="menü"),
+                    InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 Official Channel", url=f"https://t.me/Sohbetdestek")
+                    InlineKeyboardButton("📣 Kanal", url=f"https://t.me/Sohbetdestek")
                 ],
             ]
         )
@@ -559,10 +559,10 @@ async def oynat(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏺ Menu", callback_data="menü"),
-                    InlineKeyboardButton("🗑 Kapat", callback_data="cls"),
+                    InlineKeyboardButton("♒ Butonlar", callback_data="menü"),
+                    InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 Official Channel", url=f"https://t.me/Sohbetdestek")
+                    InlineKeyboardButton("📣 Kanal", url=f"https://t.me/Sohbetdestek")
                 ],
             ]
         )
@@ -590,8 +590,8 @@ async def oynat(_, message: Message):
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣"]
             while j < 7:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:25]}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ 💡 **Duration** - {results[j]['duration']}\n"
-                toxxt += f" └ ⚡ __Powered by EX MUSIC__\n\n"
+                toxxt += f" ├ 💡 **Süre ⏰** - {results[j]['duration']}\n"
+                toxxt += f" └ ⚡ __Sizin için En iyisi @SohbetDestek__\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -642,10 +642,10 @@ async def oynat(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                     [
                 [
-                    InlineKeyboardButton("⏺ Menu", callback_data="menü"),
-                    InlineKeyboardButton("🗑 Kapat", callback_data="cls"),
+                    InlineKeyboardButton("♒ Butonlar", callback_data="menü"),
+                    InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
-                    InlineKeyboardButton("📣 CHANNEL", url=f"https://t.me/Sohbetdestek")
+                    InlineKeyboardButton("📣 Kanal", url=f"https://t.me/Sohbetdestek")
                 ],
             ]
         )
@@ -741,7 +741,7 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Butonlar", callback_data="menü"),
+                    InlineKeyboardButton("⏺️ Butonlar", callback_data="menü"),
                     InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 Kanal", url=f"https://t.me/kurtadamoyunuu")
