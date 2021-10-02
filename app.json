@@ -32,7 +32,7 @@
         "BG_IMAGE": {
             "description": "arka plan resim bağlantınızla doldurma",
             "required": false,
-            "value": "https://telegra.ph/file/fa2cdb8a14a26950da711.png"
+            "value": "https://telegra.ph/file/cd0b87484429704c7b935.png"
         },
         "THUMB_IMG": {
             "description": "küçük resim görüntüsüyle doldurmak bg_image",
