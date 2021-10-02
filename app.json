@@ -1,5 +1,5 @@
 {
-    "name": "Voice Music Bot",
+    "name": "Talia Müzik Bot",
     "logo": "https://telegra.ph/file/bad69dc7929731b11e056.jpg",
     "description": "Talia Müzik projesi, telegram sesli sohbet özelliğine, Müzik akışı yapmanızı sağlar.",
     "keywords": ["music", "voice chat", "telegram"],
@@ -32,7 +32,7 @@
         "BG_IMAGE": {
             "description": "arka plan resim bağlantınızla doldurma",
             "required": false,
-            "value": "https://telegra.ph/file/5233d8c1398d4d6628e00.png"
+            "value": "https://telegra.ph/file/fa2cdb8a14a26950da711.png"
         },
         "THUMB_IMG": {
             "description": "küçük resim görüntüsüyle doldurmak bg_image",
