@@ -511,7 +511,7 @@ async def oynat(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("♒ Butonlar", callback_data="menü"),
+                    InlineKeyboardButton("⏺️ Butonlar", callback_data="menü"),
                     InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 Kanal", url=f"https://t.me/Sohbetdestek")
@@ -523,7 +523,7 @@ async def oynat(_, message: Message):
         thumb_name = "https://telegra.ph/file/fa2cdb8a14a26950da711.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
-        views = "Locally added"
+        views = "Yerel olarak eklendi"
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)
         file_path = await convert(
@@ -559,7 +559,7 @@ async def oynat(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("♒ Butonlar", callback_data="menü"),
+                    InlineKeyboardButton("⏺️ Butonlar", callback_data="menü"),
                     InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 Kanal", url=f"https://t.me/Sohbetdestek")
@@ -590,7 +590,7 @@ async def oynat(_, message: Message):
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣"]
             while j < 7:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:25]}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ 💡 **Süre ⏰** - {results[j]['duration']}\n"
+                toxxt += f" ├ 💡 **Süre ⏳** - {results[j]['duration']}\n"
                 toxxt += f" └ ⚡ __Sizin için En iyisi @SohbetDestek__\n\n"
 
                 j += 1            
@@ -642,7 +642,7 @@ async def oynat(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                     [
                 [
-                    InlineKeyboardButton("♒ Butonlar", callback_data="menü"),
+                    InlineKeyboardButton("⏺️ Butonlar", callback_data="menü"),
                     InlineKeyboardButton("❌ Kapat", callback_data="cls"),
                 ],[
                     InlineKeyboardButton("📣 Kanal", url=f"https://t.me/Sohbetdestek")
