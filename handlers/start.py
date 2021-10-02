@@ -39,7 +39,7 @@ async def start_(client: Client, message: Message):
 
 ❓ **Bu botun tüm özellikleri hakkında bilgi almak için, basınız. /help**
 
-✂ **Sesli sohbette müzik çalmak için, [Talia Resmi Kanal](hptts://t.me/Sohbetdestek) Tarafından yapılmıştır.**
+🔉 **Sesli sohbetlerde müzik çalmak için, [Talia Resmi Kanal](hptts://t.me/Sohbetdestek) Tarafından yapılmıştır.**
 </b>""",
         reply_markup=InlineKeyboardMarkup(
             [ 
@@ -54,7 +54,7 @@ async def start_(client: Client, message: Message):
                         "🏷️ Resmi Kanal", url=f"https://t.me/Sohbetdestek")
                 ],[
                     InlineKeyboardButton(
-                        "💬 Grubumuz", url=f"https://t.me/kurtadamoyunuu"
+                        "💬 Grubumuz", url=f"https://t.me/sohbetskyfall"
                     ),
                     InlineKeyboardButton(
                         "▶️ Mp3 Botu", url=f"https://t.me/Mp3_aramaBot")               
