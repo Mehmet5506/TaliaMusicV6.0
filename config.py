@@ -9,7 +9,7 @@ load_dotenv()
 que = {}
 SESSION_NAME = getenv("SESSION_NAME", "session")
 BOT_TOKEN = getenv("BOT_TOKEN")
-BOT_NAME = getenv("BOT_NAME", "ᴄʏʙᴇʀ ᴍᴜsɪᴄ ʙᴏᴛ")
+BOT_NAME = getenv("BOT_NAME", "Talia Müzik Projesi")
 BG_IMAGE = getenv("BG_IMAGE", "https://telegra.ph/file/cd0b87484429704c7b935.png")
 THUMB_IMG = getenv("THUMB_IMG", "https://i.ibb.co/VQd4HSH/Photo-1629477903701.jpg")
 AUD_IMG = getenv("AUD_IMG", "https://i.ibb.co/VQd4HSH/Photo-1629477903701.jpg")
@@ -17,11 +17,11 @@ QUE_IMG = getenv("QUE_IMG", "https://i.ibb.co/VQd4HSH/Photo-1629477903701.jpg")
 admins = {}
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
-BOT_USERNAME = getenv("BOT_USERNAME", "CyberMusikBot")
-ASSISTANT_NAME = getenv("ASSISTANT_NAME", "SaitamaHelper")
-GROUP_SUPPORT = getenv("GROUP_SUPPORT", "CyberSupportGroup")
-UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "CyberMusicProject")
-OWNER_NAME = getenv("OWNER_NAME", "Badboyanim") # isi dengan username kamu tanpa simbol @
+BOT_USERNAME = getenv("BOT_USERNAME", "Mp3dinleme_Bot ")
+ASSISTANT_NAME = getenv("ASSISTANT_NAME", "SesMusicAsistan")
+GROUP_SUPPORT = getenv("GROUP_SUPPORT", "Sohbetdestek")
+UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "EfsaneMusicProject")
+OWNER_NAME = getenv("OWNER_NAME", "Mahoaga") # kullanıcı adınızı semboller olmadan doldurma @
 DEV_NAME = getenv("DEV_NAME", "Badboyanim")
 PMPERMIT = getenv("PMPERMIT", None)
 
